@@ -1,5 +1,7 @@
 # Private runtime distribution and serving
 
+Repository: https://github.com/r0b0tlab/nemotron-3.5-lightning-sm121-nvfp4
+
 The preferred image is the private GHCR package:
 
 ```text

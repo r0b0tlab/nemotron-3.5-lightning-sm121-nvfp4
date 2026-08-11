@@ -1,5 +1,7 @@
 # NVIDIA Nemotron 3.5 Lightning — private SM121 reproducibility suite
 
+Repository: https://github.com/r0b0tlab/nemotron-3.5-lightning-sm121-nvfp4
+
 Status: private repository, local/private evidence only. No model weights, credentials, caches, raw BFCL traces, or public publication are included.
 
 This repository packages the reproducibility materials for the native MTP K=1 NVIDIA Nemotron 3.5 Lightning evaluation on NVIDIA GB10 / SM121:

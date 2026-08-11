@@ -4,7 +4,7 @@
   "local_image_id": "sha256:d2961642d36da9c552cf10cfa5248383295786fc0b673c1dbc4dd0ce85cf2e0c",
   "registry": "ghcr.io",
   "package": "r0b0tlab/nemotron-lightning-repro-runtime",
-  "package_repository": "r0b0tlab/nemotron-lightning-repro",
+  "package_repository": "r0b0tlab/nemotron-3.5-lightning-sm121-nvfp4",
   "package_visibility": "private",
   "tags": {
     "convenience": "sm121-mtp1",
