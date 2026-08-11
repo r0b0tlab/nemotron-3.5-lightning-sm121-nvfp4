@@ -7,7 +7,8 @@ Included:
 - Reconciled report and reconciliation manifest.
 - Full-run report and protocol metadata.
 - Selected full-run lane summaries for canary, BFCL score summaries, latency, concurrency, throughput, NIAH, QA, IFEval, and HumanEval.
-- GSM8K replacement report, audit, lane result, and raw 200-row GSM8K lane artifact.
+- The full native-thinking run's own GSM8K lane (182/200 = 91.0%, 5 disclosed length-finish rows at the 8,192 ceiling) under `full-native-thinking/lanes/gsm8k/`, completing the 11-lane pack.
+- GSM8K replacement report, audit, lane result, and raw 200-row GSM8K lane artifact (49,152-token retest, 189/200 = 94.5%, the campaign-accepted GSM8K).
 - 1M-window NIAH capacity probe: sanitized report, lane result, raw depth row, and smoke/pace/boundary probe rows (2026-08-11).
 - Campaign handoff and campaign manifest.
 

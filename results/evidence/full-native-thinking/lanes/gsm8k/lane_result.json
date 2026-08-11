@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "gsm8k.json": "<local-host>/artifacts/nemotron-lightning-optimization/nemotron-lightning-mtp-k1-general-thinking-on-allowed-responses-20260810T114534Z/lanes/gsm8k/gsm8k.json"
+  },
+  "elapsed_s": 1475.4543874980009,
+  "imported": false,
+  "infra_errors": 0,
+  "lane_id": "gsm8k",
+  "status": "PASS",
+  "summary": {
+    "accuracy": 0.91,
+    "concurrency": 2,
+    "correct": 182,
+    "data_path": "datasets/gsm8k/test.jsonl",
+    "infra_http_errors": 0,
+    "method": "gsm8k_0shot_flexible_extract",
+    "n": 200,
+    "seed": 0,
+    "wilson95": {
+      "high": 0.9423130212854665,
+      "low": 0.8622332538615105
+    }
+  }
+}
