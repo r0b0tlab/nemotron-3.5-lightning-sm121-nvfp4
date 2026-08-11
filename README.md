@@ -1,8 +1,8 @@
-# NVIDIA Nemotron 3.5 Lightning — private SM121 reproducibility suite
+# NVIDIA Nemotron 3.5 Lightning — SM121 reproducibility suite
 
 Repository: https://github.com/r0b0tlab/nemotron-3.5-lightning-sm121-nvfp4
 
-Status: private repository, local/private evidence only. No model weights, credentials, caches, raw BFCL traces, or public publication are included.
+Status: public reproducibility suite (published 2026-08-11 by owner decision). No model weights, credentials, caches, raw BFCL traces, or benchmark datasets are included.
 
 This repository packages the reproducibility materials for the native MTP K=1 NVIDIA Nemotron 3.5 Lightning evaluation on NVIDIA GB10 / SM121:
 
@@ -13,7 +13,7 @@ This repository packages the reproducibility materials for the native MTP K=1 NV
 - A repeatable lane-reconciliation and result-verification tool.
 - `README.md` and `AGENTS.md` contracts for human and coding-agent use.
 
-This repository is intentionally private. Do not mirror it, publish it, upload it to a public registry, or distribute its evidence without an explicit decision.
+This repository packages only reproducibility materials: no weights, datasets, credentials, or raw traces. Provide licensed local copies of anything omitted.
 
 ## Model and runtime identity
 
@@ -192,12 +192,25 @@ The local reconciled report contains all 11 lanes with `status=PASS` and zero in
 
 GSM8K had 200/200 HTTP 200 responses and zero test/infrastructure errors. Its final finish-reason distribution was 199 `stop` and one persistent model nontermination at the generous cap; that row is retained as a scoreable model result and disclosed in the audit.
 
-The reconciled report is local secondary evidence because it combines the ten successful lanes from one run with the corrected GSM8K lane from a lane-only run. It is not a claim that all lanes were produced in one uninterrupted process, and it is not a public release.
+The reconciled report is local secondary evidence because it combines the ten successful lanes from one run with the corrected GSM8K lane from a lane-only run. It is not a claim that all lanes were produced in one uninterrupted process.
 
-## Privacy and publication boundary
+## 1M context-window capacity probe (2026-08-11)
 
-- This repository is private.
-- Do not make any repository, artifact, result, image, or model data public.
+The model card claims context length up to 1M; the checkpoint config caps `max_position_embeddings` at 262,144 (NVIDIA documents the override as the serving mechanism for this family). A long-1m capacity profile (`max_model_len=1,000,000`, `max_num_seqs=1`, `gpu_memory_utilization=0.80`, prefix caching disabled, `max_num_batched_tokens=8192` unchanged, identical image/checkpoint/MTP/mamba stack, RoPE untouched via vLLM-native `VLLM_ALLOW_LONG_MAX_MODEL_LEN=1`) served the advertised 1M window and passed a single NIAH probe at 75% of the usable window:
+
+| Field | Value |
+|---|---|
+| depth | **749,808 constructed prompt tokens** (= 0.75 × (1,000,000 − 256 reserve)) |
+| result | PASS — exact needle code `R0B0-NIAH-7K3M`, finish `stop`, HTTP 200, zero infra errors |
+| token parity | server `usage.prompt_tokens` == 749,808 constructed |
+| wall time | 527.4 s (~8.8 min; ≈1,422 effective prompt tok/s) |
+| boundary evidence | diagnostic needle probes also PASS at 100K and at 300K (past the 262,144 trained-position cap) |
+| scope | single depth; 90–100% of the window untested; filtered `--only niah` run, `invalid_for_publish=true` by contract |
+
+Full row, probes, and configuration identity: `results/evidence/niah-1m-75pct/NIAH_1M_75PCT.md`.
+
+## Data boundary
+
 - Do not upload model weights, raw BFCL traces, caches, logs, `.env` files, tokens, or passwords.
 - Raw BFCL traces are intentionally omitted because fixture conversations can contain credential-like test fields; score summaries are retained.
-- A future upload/publication requires a separate explicit decision and a fresh sanitized-data review.
+- Any future expansion of published artifacts requires a fresh sanitized-data review.

@@ -1,0 +1,14 @@
+{
+  "code": "PROBE-NIAH-300K",
+  "constructed": 300000,
+  "usage_prompt_tokens": 300000,
+  "token_match": true,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "response_text": "PROBE-NIAH-300K",
+  "passed": true,
+  "infra": false,
+  "elapsed_s": 117.441,
+  "effective_prompt_tok_s": 2554.5,
+  "preemptions_delta": 0.0
+}

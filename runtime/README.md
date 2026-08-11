@@ -1,6 +1,8 @@
-# Private runtime distribution and serving
+# Runtime distribution and serving
 
 Repository: https://github.com/r0b0tlab/nemotron-3.5-lightning-sm121-nvfp4
+
+The repository is public; the GHCR runtime package currently remains **private** (not anonymously pullable). If you lack package access, build the identical image locally from `runtime/Dockerfile` against the pinned base image recorded in `runtime/image-provenance.json`.
 
 The preferred image is the private GHCR package:
 
@@ -37,6 +39,19 @@ For an immutable pull, use the registry digest in `image-provenance.json` instea
 ```bash
 MODEL_CKPT="$MODEL_CKPT" IMAGE="$IMAGE" runtime/launch.sh
 ```
+
+## Long-1m capacity profile (NIAH at 1M, qualified 2026-08-11)
+
+To serve the advertised 1M window for context-capacity testing, launch with these deltas from `runtime/launch.sh` defaults:
+
+- `MAX_MODEL_LEN=1000000`
+- `MAX_NUM_SEQS=1`
+- `GPU_MEMORY_UTILIZATION=0.80`
+- remove `--enable-prefix-caching` (clean capacity read; NVIDIA's TRT-LLM 1M configs likewise disable block reuse)
+- add container env `VLLM_ALLOW_LONG_MAX_MODEL_LEN=1` (vLLM-native override of the checkpoint's 262,144 `max_position_embeddings`; RoPE untouched, config.json unmodified)
+- keep `MAX_NUM_BATCHED_TOKENS=8192` and all MoE/KV/MTP/mamba flags identical
+
+After READY, require `/v1/models` to advertise `max_model_len=1000000` and `/metrics` `kv_cache_size_tokens` ≥ 1,000,256 before sending long prompts (21,031,578 observed at util 0.80). Evidence and the qualified 749,808-token NIAH row: `../results/evidence/niah-1m-75pct/`.
 
 `runtime/launch.sh` performs a fail-closed model preflight and starts the OpenAI-compatible endpoint on port 8000. It mounts the checkpoint read-only and uses the validated native MTP K=1 profile. Override `IMAGE`, `PORT`, `MAX_MODEL_LEN`, `MAX_NUM_SEQS`, or other documented environment variables only when the resulting profile is recorded separately.
 

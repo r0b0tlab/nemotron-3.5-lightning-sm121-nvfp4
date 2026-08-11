@@ -1,0 +1,14 @@
+{
+  "code": "PROBE-NIAH-8K",
+  "constructed": 8192,
+  "usage_prompt_tokens": 8192,
+  "token_match": true,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to find it. The text provided is a long archival record that repeats \"The archival record con",
+  "passed": true,
+  "infra": false,
+  "elapsed_s": 2.819,
+  "effective_prompt_tok_s": 2906.2,
+  "preemptions_delta": 0.0
+}

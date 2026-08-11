@@ -1,0 +1,46 @@
+{
+  "all_passed": true,
+  "code": "R0B0-NIAH-7K3M",
+  "depth_policy": "frac_of_max_context",
+  "depths": [
+    749808
+  ],
+  "fractions": [
+    0.75
+  ],
+  "generation_reserve": 256,
+  "kv_cache_size_tokens": 21031578,
+  "marker": "R0B0BENCH_NIAH_SLOT",
+  "max_model_len": 1000000,
+  "note": "Depths are always 25/50/90% of (max_model_len - generation_reserve). This is the standard max-context capacity package; physical KV shortfall surfaces as infra ERROR.",
+  "pass_count": 1,
+  "rows": [
+    {
+      "depth": 749808,
+      "elapsed_s": 527.4267596199934,
+      "finish_reason": "stop",
+      "fraction_of_usable": 0.75,
+      "http_status": 200,
+      "infra_errors": 0,
+      "max_model_len": 1000000,
+      "needle_fraction_effective": 0.4999866632524593,
+      "passed": true,
+      "prompt_sha256": "936095b5eecbb4540335cfc483ab40e8c8e208e4d8378984bda4de494af43256",
+      "prompt_tokens_constructed": 749808,
+      "response_text": "R0B0-NIAH-7K3M",
+      "status": "PASS",
+      "usage": {
+        "completion_tokens": 13,
+        "prompt_tokens": 749808,
+        "prompt_tokens_details": null,
+        "total_tokens": 749821
+      }
+    }
+  ],
+  "template_source": "server:/v1/chat/completions/render",
+  "tokenizer": {
+    "backend": "tokenizers",
+    "path": "<model-checkpoint>/tokenizer.json"
+  },
+  "total": 1
+}

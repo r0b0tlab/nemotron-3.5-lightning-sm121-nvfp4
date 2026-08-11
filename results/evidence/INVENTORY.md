@@ -8,6 +8,7 @@ Included:
 - Full-run report and protocol metadata.
 - Selected full-run lane summaries for canary, BFCL score summaries, latency, concurrency, throughput, NIAH, QA, IFEval, and HumanEval.
 - GSM8K replacement report, audit, lane result, and raw 200-row GSM8K lane artifact.
+- 1M-window NIAH capacity probe: sanitized report, lane result, raw depth row, and smoke/pace/boundary probe rows (2026-08-11).
 - Campaign handoff and campaign manifest.
 
 Intentionally omitted:

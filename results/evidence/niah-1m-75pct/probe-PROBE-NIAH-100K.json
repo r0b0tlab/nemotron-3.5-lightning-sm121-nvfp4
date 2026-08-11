@@ -1,0 +1,14 @@
+{
+  "code": "PROBE-NIAH-100K",
+  "constructed": 100000,
+  "usage_prompt_tokens": 100000,
+  "token_match": true,
+  "http_status": 200,
+  "finish_reason": "stop",
+  "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to look carefully at the text to find it.\n\nLooking through the provided text, I see repeated ",
+  "passed": true,
+  "infra": false,
+  "elapsed_s": 24.512,
+  "effective_prompt_tok_s": 4079.7,
+  "preemptions_delta": 0.0
+}
