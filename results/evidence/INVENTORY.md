@@ -1,6 +1,6 @@
 # Evidence inventory and omissions
 
-The repository is a private reproducibility snapshot. The report JSONs are preserved as sanitized provenance records; some original artifact paths point to local raw outputs that are intentionally not copied here.
+The repository is a sanitized reproducibility snapshot. The report JSONs are preserved as sanitized provenance records; some original artifact paths point to local raw outputs that are intentionally not copied here.
 
 Included:
 

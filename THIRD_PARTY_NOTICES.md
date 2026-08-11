@@ -1,6 +1,6 @@
 # Third-party notices
 
-This private repository contains original orchestration/documentation material and a snapshot of the MIT-licensed r0b0bench implementation. The MIT license applies only to original r0b0bench material.
+This repository contains original orchestration/documentation material and a snapshot of the MIT-licensed r0b0bench implementation. The MIT license applies only to original r0b0bench material.
 
 The runtime and benchmark commands depend on third-party software and datasets that remain subject to their own terms:
 

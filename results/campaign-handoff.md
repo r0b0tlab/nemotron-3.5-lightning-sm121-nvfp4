@@ -1,4 +1,4 @@
-# Nemotron Lightning private campaign handoff
+# Nemotron Lightning campaign handoff
 
 Status: COMPLETE_WITH_DISCLOSURES
 
@@ -6,7 +6,7 @@ Model: nvidia/nemotron-3.5-lightning-30b-a3b
 Hardware: NVIDIA GB10 / SM121
 Image: nemotron-lightning-vllm:private-sm121-mtp
 Image ID: sha256:442df05bcaaf4ca33d1e7eb6d18ea0f4272be6b1503b6604dc191acbd4e47640
-Benchmark: r0b0bench 1.0.0rc2 with private Nemotron/BFCL compatibility corrections
+Benchmark: r0b0bench 1.0.0rc2 with in-tree Nemotron/BFCL compatibility corrections
 
 Primary eligible row
 --------------------

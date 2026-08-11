@@ -1,6 +1,6 @@
 # r0b0bench implementation snapshot
 
-This directory contains the exact model-neutral benchmark client source used for the private NVIDIA Nemotron 3.5 Lightning evaluation.
+This directory contains the exact model-neutral benchmark client source used for the NVIDIA Nemotron 3.5 Lightning evaluation.
 
 - Package version: `1.0.0rc2`
 - Base commit: `e0f0bf667d3ea8e97f2a9c4453f94201173c7082`

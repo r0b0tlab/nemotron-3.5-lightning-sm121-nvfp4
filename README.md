@@ -8,7 +8,7 @@ This repository packages the reproducibility materials for the native MTP K=1 NV
 
 - A pinned ARM64 runtime-container recipe and launch/audit scripts.
 - The exact r0b0bench source tree used by the corrected native-thinking campaign.
-- The private compatibility patch and source identities.
+- The in-tree compatibility patch and source identities.
 - Sanitized reconciled 11-lane results and lane provenance.
 - A repeatable lane-reconciliation and result-verification tool.
 - `README.md` and `AGENTS.md` contracts for human and coding-agent use.
@@ -32,7 +32,7 @@ Runtime:
 
 - Hardware: NVIDIA GB10 / SM121, Linux ARM64
 - Base image: `vllm/vllm-openai@sha256:3af90144a0926e5c5fe46ee16e5201e763dd854538b9d7ce433755f11dadaf78`
-- Private GHCR runtime image: `ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1`
+- GHCR runtime image: `ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1`
 - Local build image used for the evidence: `nemotron-lightning-vllm:private-sm121-mtp`
 - Recorded local image ID: `sha256:442df05bcaaf4ca33d1e7eb6d18ea0f4272be6b1503b6604dc191acbd4e47640`
 - The registry digest is recorded in `runtime/image-provenance.json` after each authorized image publication.
@@ -46,7 +46,7 @@ Runtime:
 - CUDA graphs enabled through the pinned compilation configuration
 - Operational profile: `max_model_len=50016`, `max_num_batched_tokens=8192`, `max_num_seqs=6`, `gpu_memory_utilization=0.70`
 
-The runtime Dockerfile builds the private wrapper from the pinned base image and installs `fastokens==0.3.1`. The checkpoint is mounted read-only at runtime and is never baked into the image.
+The runtime Dockerfile builds the wrapper from the pinned base image and installs `fastokens==0.3.1`. The checkpoint is mounted read-only at runtime and is never baked into the image.
 
 ## Benchmark identity
 
@@ -84,9 +84,9 @@ export R0B0BENCH_QA_DATA=/absolute/path/to/arc_easy_test.jsonl
 
 Do not put those paths, weights, or credentials into commits.
 
-### 2. Pull the private runtime image
+### 2. Pull the runtime image
 
-The runtime image is published to private GHCR. Only GitHub users/org members with access to this private repository and the private package can pull it. Model weights are never included in the image.
+The runtime image is published to public GHCR and is anonymously pullable. Model weights are never included in the image.
 
 Authenticate with a short-lived GitHub token that has `read:packages` access; do not put the token in this repository or in shell history:
 
@@ -130,7 +130,7 @@ curl --fail --silent http://127.0.0.1:8000/v1/chat/completions \
   -d '{"model":"nvidia/nemotron-3.5-lightning-30b-a3b","messages":[{"role":"user","content":"Give a one-sentence greeting."}],"max_tokens":128}'
 ```
 
-The returned model ID must be `nvidia/nemotron-3.5-lightning-30b-a3b`. Keep the GHCR package and repository private; collaborators need explicit GitHub/package access plus authorized local model weights.
+The returned model ID must be `nvidia/nemotron-3.5-lightning-30b-a3b`. The repository and GHCR package are public; you still need authorized local model weights (NVIDIA Software and Model Evaluation License) to serve.
 
 ### 5. Install and run the benchmark client
 

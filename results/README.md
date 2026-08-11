@@ -1,6 +1,6 @@
 # Results snapshot
 
-This directory contains sanitized private evidence snapshots for the native-thinking Nemotron Lightning campaign.
+This directory contains sanitized evidence snapshots for the native-thinking Nemotron Lightning campaign.
 
 ## Contents
 

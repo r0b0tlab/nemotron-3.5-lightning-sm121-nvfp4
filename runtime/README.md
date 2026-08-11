@@ -2,19 +2,18 @@
 
 Repository: https://github.com/r0b0tlab/nemotron-3.5-lightning-sm121-nvfp4
 
-The repository is public; the GHCR runtime package currently remains **private** (not anonymously pullable). If you lack package access, build the identical image locally from `runtime/Dockerfile` against the pinned base image recorded in `runtime/image-provenance.json`.
+The repository and the GHCR runtime package are public and anonymously pullable. If you prefer a local build, use `runtime/Dockerfile` against the pinned base image recorded in `runtime/image-provenance.json`.
 
-The preferred image is the private GHCR package:
+The preferred image is the GHCR package:
 
 ```text
 ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1
 ```
 
-The package is linked to the private GitHub repository through OCI source labels. It is not anonymously pullable. Authorized collaborators need:
+The package is linked to the public GitHub repository through OCI source labels. It is anonymously pullable. Anyone can pull it; serving still requires:
 
-1. access to the private repository;
-2. access to the private GHCR package; and
-3. an authorized local copy of the model checkpoint.
+1. an authorized local copy of the model checkpoint (NVIDIA Software and Model Evaluation License); and
+2. a Docker/ARM64 SM121 host.
 
 The image contains the runtime only. It does not contain model weights, tokenizer data, benchmark datasets, credentials, or API tokens.
 
@@ -69,4 +68,4 @@ Then set `IMAGE=nemotron-lightning-vllm:private-sm121-mtp` for the audit and lau
 
 ## Privacy
 
-Keep the repository, package, model checkpoint, logs, and benchmark outputs private. Do not add a public pull command or make the GHCR package public without a separate explicit authorization.
+Keep the model checkpoint, logs, and benchmark outputs out of this repository. The repository and GHCR package are public; model weights and datasets remain licensed/private and must never be uploaded.

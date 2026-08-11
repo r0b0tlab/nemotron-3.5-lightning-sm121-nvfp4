@@ -1,15 +1,15 @@
-# AGENTS.md — private Nemotron Lightning reproducibility suite
+# AGENTS.md — Nemotron Lightning reproducibility suite
 
 ## Repository boundary
 
-- This repository was private until 2026-08-11, when the owner made it public.
+- This repository is public (made so by the owner on 2026-08-11).
 - Never upload model weights, benchmark datasets, raw BFCL traces, caches, logs, `.env` files, API keys, tokens, passwords, or local host paths.
 - The local evidence snapshot is for reproducibility and review.
 
 ## What this repository contains
 
 - `runtime/`: pinned ARM64/SM121 runtime Dockerfile, model preflight, container audit, and parameterized launch script.
-- `benchmark/`: exact r0b0bench source tree plus the private compatibility patch used for native-thinking evaluation.
+- `benchmark/`: exact r0b0bench source tree plus the in-tree compatibility patch used for native-thinking evaluation.
 - `scripts/`: benchmark launcher, lane reconciler, and fail-closed result verifier.
 - `results/`: sanitized summaries, provenance, and selected raw GSM8K evidence. Raw BFCL traces are deliberately absent.
 
@@ -55,7 +55,7 @@ git status --short
 git ls-files
 ```
 
-Run a broad safety scan over the staged tree. A token-like value, absolute private path, model-weight file, cache, or raw fixture trace is a blocker.
+Run a broad safety scan over the staged tree. A token-like value, absolute host path, model-weight file, cache, or raw fixture trace is a blocker.
 
 ## GitHub boundary
 
