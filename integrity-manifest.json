@@ -312,9 +312,9 @@
       "sha256": "a9f2c557c8fe34559b2fc20b46a1ce62ef60b501140e80ddb365a59b80d3a480"
     },
     {
-      "bytes": 607,
+      "bytes": 1337,
       "path": "runtime/image-provenance.json",
-      "sha256": "dab85ccb54495dada368746b9af092a346565793294f88a29e4bb0e1d9c64095"
+      "sha256": "89bbe6ba1ebca0b0d0cb4a9ca47f30cd36be58ec4caaf96ccd1b6b13882d2bdd"
     },
     {
       "bytes": 2881,
