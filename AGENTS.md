@@ -2,11 +2,9 @@
 
 ## Repository boundary
 
-- This repository is private and must remain private.
-- Never create a public mirror, public release, public gist, public container tag, or public dataset from this tree.
+- This repository was private until 2026-08-11, when the owner made it public.
 - Never upload model weights, benchmark datasets, raw BFCL traces, caches, logs, `.env` files, API keys, tokens, passwords, or local host paths.
-- Do not change GitHub visibility without explicit user instruction.
-- The local evidence snapshot is for reproducibility and later review, not automatic publication.
+- The local evidence snapshot is for reproducibility and review.
 
 ## What this repository contains
 
@@ -61,8 +59,8 @@ Run a broad safety scan over the staged tree. A token-like value, absolute priva
 
 ## GitHub boundary
 
-- The target repository is private under the authorized owner/org.
+- The target repository is public under the authorized owner/org (made public 2026-08-11).
 - Use the least-privilege authenticated path configured for this environment.
 - Never put credentials in remotes, scripts, commits, or logs.
-- Verify private visibility and the exact pushed commit after any authorized push.
+- Verify public visibility and the exact pushed commit after any authorized push.
 - A successful push is not proof of correct contents; inspect the remote tree and clone it with credentials disabled for read-back.
