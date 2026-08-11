@@ -1,5 +1,5 @@
 {
-  "file_count": 69,
+  "file_count": 70,
   "files": [
     {
       "bytes": 136,
@@ -22,9 +22,9 @@
       "sha256": "a6557ec2636cd473218da7e6746eab240eaf9e974321badea7eccdf0b86b0614"
     },
     {
-      "bytes": 7895,
+      "bytes": 9595,
       "path": "README.md",
-      "sha256": "cd208df4a1c1e7fcfd297393dd4695f7a9525f359bd2b3f33dd2d139e4faf624"
+      "sha256": "6a7cad0cdebaf7f995c235c348223d54b886d56404a4f41983792c70fb7794ff"
     },
     {
       "bytes": 1015,
@@ -297,14 +297,14 @@
       "sha256": "9379617c95e710cac15ae638ad5016bc3409943fede59c9a8f10ef575be6eb77"
     },
     {
-      "bytes": 883,
+      "bytes": 1287,
       "path": "runtime/Dockerfile",
-      "sha256": "dea6edf695d859eff11e34a4f82f9e6f17f69d49756b526ba598fb196fb2b893"
+      "sha256": "55a778ba753bf13c27922c47277318abe2b5598f21b131ce3f322b49acf7fef0"
     },
     {
-      "bytes": 958,
+      "bytes": 2264,
       "path": "runtime/README.md",
-      "sha256": "f1829866c6999c74fe406e239256e2451fbe55fde172b10f17e9087c4b1b3395"
+      "sha256": "1b6591a1ef4f5234287b8da19e9d08b769d37dbe7a82f04338f0efa04d0a2fa0"
     },
     {
       "bytes": 2815,
@@ -317,19 +317,24 @@
       "sha256": "dab85ccb54495dada368746b9af092a346565793294f88a29e4bb0e1d9c64095"
     },
     {
-      "bytes": 2862,
+      "bytes": 2881,
       "path": "runtime/launch.sh",
-      "sha256": "f66219d304b1b7f094687b471d3aa5b02c346aa0cfdbe01970d719377f971164"
+      "sha256": "550bd7c2606e6d33041bbbe0c1cb400211b47bcb13474566b8279eb3a746cf5e"
     },
     {
-      "bytes": 1370,
+      "bytes": 1466,
       "path": "runtime/runtime-contract.json",
-      "sha256": "02ce3145577c4dbb81ee16ea9db8864677f82bd1461090007da30b600ba7658c"
+      "sha256": "eea91af734e5898b44cc2a3cee036882c3fea8ab29e622a78357c127d562efbc"
     },
     {
-      "bytes": 1315,
+      "bytes": 1334,
       "path": "runtime/verify_sm121.sh",
-      "sha256": "ad3e4b9d8120ffc0098748544d4dfaa843e6926a481645f1defa92d241817dc8"
+      "sha256": "8de49ce72bc2014d221929290e6851e9ed80aeb2b971dabc85b884b897d65ffe"
+    },
+    {
+      "bytes": 309,
+      "path": "scripts/pull_runtime.sh",
+      "sha256": "dd4f27561a6729503173f46990d66b15d7098830983295f11eb495c4556f8c3e"
     },
     {
       "bytes": 2198,

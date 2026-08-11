@@ -3,7 +3,7 @@ set -Eeuo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODEL_CKPT="${MODEL_CKPT:?Set MODEL_CKPT to the local Nemotron checkpoint directory}"
-IMAGE="${IMAGE:-nemotron-lightning-vllm:private-sm121-mtp}"
+IMAGE="${IMAGE:-ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1}"
 CONTAINER_NAME="${CONTAINER_NAME:-nemotron-lightning-mtp-k1-repro}"
 PORT="${PORT:-8000}"
 SERVED_MODEL_NAME="${SERVED_MODEL_NAME:-nvidia/nemotron-3.5-lightning-30b-a3b}"

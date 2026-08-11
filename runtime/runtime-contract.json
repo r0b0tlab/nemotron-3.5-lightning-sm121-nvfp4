@@ -28,7 +28,8 @@
   },
   "runtime": {
     "base_image": "vllm/vllm-openai@sha256:3af90144a0926e5c5fe46ee16e5201e763dd854538b9d7ce433755f11dadaf78",
-    "wrapper_image": "nemotron-lightning-vllm:private-sm121-mtp",
+    "private_ghcr_image": "ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1",
+    "local_wrapper_image": "nemotron-lightning-vllm:private-sm121-mtp",
     "vllm": "0.23.1rc1.dev1327+gf25953cc5",
     "torch": "2.11.0+cu129",
     "flashinfer": "0.6.14",

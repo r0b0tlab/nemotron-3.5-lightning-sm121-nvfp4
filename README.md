@@ -30,8 +30,10 @@ Runtime:
 
 - Hardware: NVIDIA GB10 / SM121, Linux ARM64
 - Base image: `vllm/vllm-openai@sha256:3af90144a0926e5c5fe46ee16e5201e763dd854538b9d7ce433755f11dadaf78`
-- Local private wrapper image used for the evidence: `nemotron-lightning-vllm:private-sm121-mtp`
+- Private GHCR runtime image: `ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1`
+- Local build image used for the evidence: `nemotron-lightning-vllm:private-sm121-mtp`
 - Recorded local image ID: `sha256:442df05bcaaf4ca33d1e7eb6d18ea0f4272be6b1503b6604dc191acbd4e47640`
+- The registry digest is recorded in `runtime/image-provenance.json` after each authorized image publication.
 - vLLM: `0.23.1rc1.dev1327+gf25953cc5`
 - PyTorch: `2.11.0+cu129`
 - FlashInfer: `0.6.14`
@@ -80,31 +82,55 @@ export R0B0BENCH_QA_DATA=/absolute/path/to/arc_easy_test.jsonl
 
 Do not put those paths, weights, or credentials into commits.
 
-### 2. Build the private runtime wrapper
+### 2. Pull the private runtime image
+
+The runtime image is published to private GHCR. Only GitHub users/org members with access to this private repository and the private package can pull it. Model weights are never included in the image.
+
+Authenticate with a short-lived GitHub token that has `read:packages` access; do not put the token in this repository or in shell history:
+
+```bash
+export GHCR_USERNAME=YOUR_GITHUB_USERNAME
+printf '%s' "$GHCR_READ_PACKAGES_TOKEN" | docker login ghcr.io -u "$GHCR_USERNAME" --password-stdin
+unset GHCR_READ_PACKAGES_TOKEN
+
+docker pull ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1
+```
+
+For an immutable deployment, replace the tag with the `sha256:` registry digest recorded in `runtime/image-provenance.json`.
+
+### 3. Prepare model weights and audit the image
 
 On an ARM64/SM121 host with Docker and NVIDIA Container Toolkit:
 
 ```bash
-docker build --platform linux/arm64 -t nemotron-lightning-vllm:private-sm121-mtp runtime
+export MODEL_CKPT=/absolute/path/to/nemotron-3.5-lightning-30b-a3b
+export IMAGE=ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1
+
+MODEL_CKPT="$MODEL_CKPT" IMAGE="$IMAGE" runtime/verify_sm121.sh
 ```
 
-The pinned base image must resolve to the digest recorded above. The build does not download or copy model weights.
+The model directory must contain `config.json`, `model.safetensors.index.json`, all 52 shards, tokenizer files, and trained `mtp.*` tensors. The audit fails closed if these are missing. The pinned base image must resolve to the digest recorded above; the image does not download or copy model weights.
 
-### 3. Audit and launch the endpoint
+### 4. Serve the model
 
 ```bash
 MODEL_CKPT="$MODEL_CKPT" \
-IMAGE=nemotron-lightning-vllm:private-sm121-mtp \
-runtime/verify_sm121.sh
-
-MODEL_CKPT="$MODEL_CKPT" \
-IMAGE=nemotron-lightning-vllm:private-sm121-mtp \
+IMAGE="$IMAGE" \
 runtime/launch.sh
 ```
 
-The launcher uses a read-only model mount, FP8 KV, Marlin target MoE, Triton native MTP, and the exact served model ID. Wait for `/v1/models` and verify the returned model identity before benchmark traffic.
+The launcher uses a read-only model mount, FP8 KV, Marlin target MoE, Triton native MTP K=1, exact model identity, `--ipc=host`, a 64 GiB shared-memory limit, and NVIDIA GPU access. In a second shell, wait for readiness and verify identity:
 
-### 4. Install and run the benchmark client
+```bash
+curl --fail --silent http://127.0.0.1:8000/v1/models | python3 -m json.tool
+curl --fail --silent http://127.0.0.1:8000/v1/chat/completions \
+  -H 'Content-Type: application/json' \
+  -d '{"model":"nvidia/nemotron-3.5-lightning-30b-a3b","messages":[{"role":"user","content":"Give a one-sentence greeting."}],"max_tokens":128}'
+```
+
+The returned model ID must be `nvidia/nemotron-3.5-lightning-30b-a3b`. Keep the GHCR package and repository private; collaborators need explicit GitHub/package access plus authorized local model weights.
+
+### 5. Install and run the benchmark client
 
 ```bash
 python3 -m venv .venv

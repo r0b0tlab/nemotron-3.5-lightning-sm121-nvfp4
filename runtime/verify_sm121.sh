@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MODEL_CKPT="${MODEL_CKPT:?Set MODEL_CKPT to the local checkpoint directory}"
-IMAGE="${IMAGE:-nemotron-lightning-vllm:private-sm121-mtp}"
+IMAGE="${IMAGE:-ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1}"
 
 docker image inspect "$IMAGE" --format 'image={{.Id}} arch={{.Architecture}} os={{.Os}} size={{.Size}} repo_digests={{json .RepoDigests}}'
 MODEL_CKPT="$MODEL_CKPT" python3 - <<'PY'
