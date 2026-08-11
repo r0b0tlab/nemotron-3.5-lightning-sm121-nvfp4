@@ -1,18 +1,18 @@
 {
   "local_evidence_image": "nemotron-lightning-vllm:private-sm121-mtp",
   "local_published_image": "ghcr.io/r0b0tlab/nemotron-lightning-repro-runtime:sm121-mtp1",
-  "local_image_id": "sha256:d2961642d36da9c552cf10cfa5248383295786fc0b673c1dbc4dd0ce85cf2e0c",
+  "local_image_id": "sha256:646810ea45a999a25e4ff7647039a5da6b6217acf3f8bed6bfe6957c08e4feed",
   "registry": "ghcr.io",
   "package": "r0b0tlab/nemotron-lightning-repro-runtime",
   "package_repository": "r0b0tlab/nemotron-3.5-lightning-sm121-nvfp4",
   "package_visibility": "private",
   "tags": {
     "convenience": "sm121-mtp1",
-    "immutable_revision": "6374dd8eb82c336de25a7b161f57c7b287ce8d0d"
+    "immutable_revision": "cdecd03ad3cdeb09bb04d7bd5b6d911f9ea87b5d"
   },
-  "registry_manifest_digest": "sha256:366aa5f5a220302fd0c590bca7cfb95304a8b2c1b4bdc9593fab69d216590708",
-  "registry_config_digest": "sha256:d2961642d36da9c552cf10cfa5248383295786fc0b673c1dbc4dd0ce85cf2e0c",
-  "source_revision_in_image": "6374dd8eb82c336de25a7b161f57c7b287ce8d0d",
+  "registry_manifest_digest": "sha256:9fcb3b11818b035605783471c10cd169aaa3ffd62eafd9f1c647e9dce40d2dda",
+  "registry_config_digest": "sha256:646810ea45a999a25e4ff7647039a5da6b6217acf3f8bed6bfe6957c08e4feed",
+  "source_revision_in_image": "cdecd03ad3cdeb09bb04d7bd5b6d911f9ea87b5d",
   "base_image_digest": "vllm/vllm-openai@sha256:3af90144a0926e5c5fe46ee16e5201e763dd854538b9d7ce433755f11dadaf78",
   "architecture": "arm64",
   "os": "linux",
