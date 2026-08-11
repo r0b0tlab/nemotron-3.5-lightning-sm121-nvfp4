@@ -1,0 +1,92 @@
+{
+  "all_passed": true,
+  "code": "R0B0-NIAH-7K3M",
+  "depth_policy": "frac_of_max_context",
+  "depths": [
+    10456,
+    20912,
+    37641
+  ],
+  "fractions": [
+    0.25,
+    0.5,
+    0.9
+  ],
+  "generation_reserve": 8192,
+  "kv_cache_size_tokens": 11828784,
+  "marker": "R0B0BENCH_NIAH_SLOT",
+  "max_model_len": 50016,
+  "note": "Depths are always 25/50/90% of (max_model_len - generation_reserve). This is the standard max-context capacity package; physical KV shortfall surfaces as infra ERROR.",
+  "pass_count": 3,
+  "rows": [
+    {
+      "depth": 10456,
+      "elapsed_s": 3.682666008011438,
+      "finish_reason": "stop",
+      "fraction_of_usable": 0.25,
+      "http_status": 200,
+      "infra_errors": 0,
+      "max_model_len": 50016,
+      "needle_fraction_effective": 0.49904361132364194,
+      "passed": true,
+      "prompt_sha256": "d5ea00c7c10367eab259adb782bd9372d5f020ba0e893aad3e953ff0947bbb92",
+      "prompt_tokens_constructed": 10456,
+      "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to find it. The archival record is repetitive, containing the same sentence over and over: \"The archival record contains neutral observations about weather, tools, books, roads, and ordinary daily events.\" However, at the very end, there's a line that says: \"IMPORTANT SECRET VERIFICATION CODE: R0B0-NIAH-7K3M\". That must be the code. The instruction says: \"A secret verification code appears ",
+      "status": "PASS",
+      "usage": {
+        "completion_tokens": 183,
+        "prompt_tokens": 10456,
+        "prompt_tokens_details": null,
+        "total_tokens": 10639
+      }
+    },
+    {
+      "depth": 20912,
+      "elapsed_s": 6.443476903004921,
+      "finish_reason": "stop",
+      "fraction_of_usable": 0.5,
+      "http_status": 200,
+      "infra_errors": 0,
+      "max_model_len": 50016,
+      "needle_fraction_effective": 0.499521805661821,
+      "passed": true,
+      "prompt_sha256": "a44ee7c89a28c47a1c2b1ddd213e351e984a428e5c57a751478239cdae227074",
+      "prompt_tokens_constructed": 20912,
+      "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to find it carefully.\n\nLooking at the text, I see repeated phrases: \"The archival record contains neutral observations about weather, tools, books, roads, and ordinary daily events.\" This phrase repeats many times.\n\nBut I notice at the very beginning, there's a line that says: \"IMPORTANT SECRET VERIFICATION CODE: R0B0-NIAH-7K3M\"\n\nThis seems to be the secret verification code. It's stated ex",
+      "status": "PASS",
+      "usage": {
+        "completion_tokens": 220,
+        "prompt_tokens": 20912,
+        "prompt_tokens_details": null,
+        "total_tokens": 21132
+      }
+    },
+    {
+      "depth": 37641,
+      "elapsed_s": 9.673227466002572,
+      "finish_reason": "stop",
+      "fraction_of_usable": 0.9,
+      "http_status": 200,
+      "infra_errors": 0,
+      "max_model_len": 50016,
+      "needle_fraction_effective": 0.49974761563189074,
+      "passed": true,
+      "prompt_sha256": "9f81639409f998561ea8f2d6bae5da131a796770976efbe672dd4709d616d64b",
+      "prompt_tokens_constructed": 37641,
+      "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to carefully read the text to find it.\n\nLooking at the text, I see a pattern: the archival record contains neutral observations about weather, tools, books, roads, and ordinary daily events. This repeats many times.\n\nHowever, towards the end of the text, I see something different:\n\n\"IMPORTANT SECRET VERIFICATION CODE: R0B0-NIAH-7K3M\"\n\nThis appears to be the secret verification code that the",
+      "status": "PASS",
+      "usage": {
+        "completion_tokens": 206,
+        "prompt_tokens": 37641,
+        "prompt_tokens_details": null,
+        "total_tokens": 37847
+      }
+    }
+  ],
+  "template_source": "server:/v1/chat/completions/render",
+  "tokenizer": {
+    "backend": "tokenizers",
+    "path": "model-assets/tokenizer.json"
+  },
+  "total": 3
+}

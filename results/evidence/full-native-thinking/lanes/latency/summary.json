@@ -1,0 +1,145 @@
+{
+  "drop_first_rep": true,
+  "failed": 0,
+  "method": "openai_chat_stream_c1_latency",
+  "nonstream": {
+    "e2el_ms_mean": 15182.433564001258,
+    "n_stable": 2,
+    "rows": [
+      {
+        "completion_tokens": 894,
+        "e2el_ms": 9011.9796900035,
+        "elapsed_s": 9.0119796900035,
+        "http_status": 200,
+        "ok": true,
+        "prompt_tokens": 49,
+        "rep": 1
+      },
+      {
+        "completion_tokens": 2065,
+        "e2el_ms": 20612.382286002685,
+        "elapsed_s": 20.612382286002685,
+        "http_status": 200,
+        "ok": true,
+        "prompt_tokens": 49,
+        "rep": 2
+      },
+      {
+        "completion_tokens": 974,
+        "e2el_ms": 9752.48484199983,
+        "elapsed_s": 9.75248484199983,
+        "http_status": 200,
+        "ok": true,
+        "prompt_tokens": 49,
+        "rep": 3
+      }
+    ]
+  },
+  "output_tokens": 8192,
+  "reps": 5,
+  "stream": {
+    "e2el_ms_mean": 10085.781061252419,
+    "itl_ms_mean": 19.28555048526875,
+    "itl_ms_p50_mean": 18.889416500314837,
+    "itl_ms_p95_mean": 20.3195527022217,
+    "n_stable": 4,
+    "rows": [
+      {
+        "e2el_ms": 7314.02204400365,
+        "elapsed_s": 7.31402204400365,
+        "finish_reason": "stop",
+        "http_status": 200,
+        "itl_ms_mean": 19.389994883456936,
+        "itl_ms_p50": 18.9023310012999,
+        "itl_ms_p95": 20.121065199782603,
+        "ok": true,
+        "rep": 1,
+        "stream_completion_chunks": 370,
+        "text": "Copper is renowned for its exceptional electrical conductivity, ranking second only to silver among pure metals at approximately 5.96 × 10⁷ Siemens per meter. This high conductivity arises from its atomic structure, which facilitates easy movement of free electrons, making it the preferred material for electrical wiring, circuitry, and power transmission. Its balance of performance, cost, and reliability cements copper as the industry standard for conductive applications in modern electronics.",
+        "ttft_ms": 158.19784100312972,
+        "usage": {
+          "completion_tokens": 706,
+          "prompt_tokens": 46,
+          "total_tokens": 752
+        }
+      },
+      {
+        "e2el_ms": 9055.067540000891,
+        "elapsed_s": 9.055067540000891,
+        "finish_reason": "stop",
+        "http_status": 200,
+        "itl_ms_mean": 19.31288559052487,
+        "itl_ms_p50": 18.916196499048965,
+        "itl_ms_p95": 20.102685503661633,
+        "ok": true,
+        "rep": 2,
+        "stream_completion_chunks": 465,
+        "text": "Copper is among the best electrical conductors of all metals, surpassed only by silver. Its high conductivity arises from a lattice of atoms with freely moving electrons that carry electric current with minimal resistance. At 20°C, pure copper achieves approximately 5.96 × 10⁷ siemens per meter, or 100% of the International Annealed Copper Standard (IACS). This property makes it essential for electrical wiring, printed circuit boards, and power distribution systems worldwide, offering an optimal balance of conductivity, cost, and durability.",
+        "ttft_ms": 93.78582600038499,
+        "usage": {
+          "completion_tokens": 890,
+          "prompt_tokens": 46,
+          "total_tokens": 936
+        }
+      },
+      {
+        "e2el_ms": 10018.995435006218,
+        "elapsed_s": 10.018995435006218,
+        "finish_reason": "stop",
+        "http_status": 200,
+        "itl_ms_mean": 19.389345068361763,
+        "itl_ms_p50": 18.900503502663923,
+        "itl_ms_p95": 20.502738398863585,
+        "ok": true,
+        "rep": 3,
+        "stream_completion_chunks": 513,
+        "text": "Copper is the second-most electrically conductive pure metal after silver, with a conductivity of approximately 5.8 × 10⁷ siemens per meter (about 100% IACS). Its exceptional conductivity stems from a high density of free electrons that flow easily under an electric field. This property makes copper the primary material for electrical wiring, printed circuit boards, and power distribution systems, though its performance can decrease with impurities, cold working, or elevated temperatures.",
+        "ttft_ms": 91.44972100330051,
+        "usage": {
+          "completion_tokens": 1003,
+          "prompt_tokens": 46,
+          "total_tokens": 1049
+        }
+      },
+      {
+        "e2el_ms": 8684.44642599934,
+        "elapsed_s": 8.68444642599934,
+        "finish_reason": "stop",
+        "http_status": 200,
+        "itl_ms_mean": 19.245473017982793,
+        "itl_ms_p50": 18.835105998732615,
+        "itl_ms_p95": 20.232677402964327,
+        "ok": true,
+        "rep": 4,
+        "stream_completion_chunks": 446,
+        "text": "Copper is the second-most electrically conductive pure metal after silver, with a conductivity of approximately 5.96 × 10⁷ siemens per meter and a resistivity of about 1.68 × 10⁻⁸ ohm-meters at 20°C. Its excellent balance of conductivity, ductility, and cost makes it the standard material for electrical wiring, printed circuit boards, and power distribution systems worldwide.",
+        "ttft_ms": 100.56390999670839,
+        "usage": {
+          "completion_tokens": 860,
+          "prompt_tokens": 46,
+          "total_tokens": 906
+        }
+      },
+      {
+        "e2el_ms": 12584.614844003227,
+        "elapsed_s": 12.584614844003227,
+        "finish_reason": "stop",
+        "http_status": 200,
+        "itl_ms_mean": 19.194498264205574,
+        "itl_ms_p50": 18.905860000813846,
+        "itl_ms_p95": 20.440109503397252,
+        "ok": true,
+        "rep": 5,
+        "stream_completion_chunks": 652,
+        "text": "Copper exhibits the second-highest electrical conductivity of all pure metals, surpassed only by silver, with a resistivity of approximately 1.68 × 10⁻⁸ Ω·m at 20°C. Its conductivity arises from a high concentration of free electrons that move readily through its atomic lattice. This property makes copper the preferred material for electrical wiring, motor windings, and printed circuit boards. While purity, temperature, and mechanical treatment influence performance, copper remains the industry standard for efficient electrical conduction.",
+        "ttft_ms": 88.71311500115553,
+        "usage": {
+          "completion_tokens": 1235,
+          "prompt_tokens": 46,
+          "total_tokens": 1281
+        }
+      }
+    ],
+    "ttft_ms_mean": 93.62814300038735
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "results": [
+    {
+      "elapsed_s": 2.659301347004657,
+      "http_status": 200,
+      "id": "identity",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "R0B0BENCH_OK",
+              "function_call": null,
+              "reasoning": "Here's a thinking process:\n\n1.  **Analyze User Input:**\n   - User says: \"Reply with exactly R0B0BENCH_OK and nothing else.\"\n   - This is a direct instruction to output a specific string exactly as specified, with no additional text.\n\n2.  **Identify the Required Output:**\n   - The exact string is: `R0B0BENCH_OK`\n   - \"and nothing else\" means no spaces, no newlines (or maybe just the string, but typically \"nothing else\" means just that exact string, possibly without a trailing newline, but usually in these tasks, just the string is fine)\n   - I need to output exactly `R0B0BENCH_OK` and nothing else.\n\n3.  **Formulate Response:**\n   - Output: `R0B0BENCH_OK`\n   - Must ensure no extra characters, spaces, or newlines beyond what's necessary, but typically just the string is expected.\n\n4.  **Final Check:**\n   - Output matches exactly: R0B0BENCH_OK\n   - No extra text.\n   - Ready.✅",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1786362334,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-a670562e40c8ed73",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.23.1rc1.dev1327+gf25953cc5-127cca16",
+        "usage": {
+          "completion_tokens": 250,
+          "prompt_tokens": 31,
+          "prompt_tokens_details": null,
+          "total_tokens": 281
+        }
+      }
+    },
+    {
+      "elapsed_s": 2.9245492789996206,
+      "http_status": 200,
+      "id": "zh_arithmetic",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "323",
+              "function_call": null,
+              "reasoning": "Here's a thinking process:\n\n1.  **Analyze User Input:**\n   - User asks: \"只回答数字：17乘以19等于多少？\"\n   - Translation: \"Only answer with numbers: What is 17 multiplied by 19?\"\n   - Constraint: Output must be just the number, no extra text.\n\n2.  **Calculate 17 × 19:**\n   - 17 × 19 = 17 × (20 - 1) = 340 - 17 = 323\n   - Or: 19 × 10 = 190, 19 × 7 = 133, 190 + 133 = 323\n   - Or: 17 × 20 = 340, minus 17 = 323\n   - Result: 323\n\n3.  **Apply Constraint:**\n   - Output must be only the number.\n   - So just \"323\"\n\n4.  **Final Output Generation:**\n   - \"323\" (and nothing else, or just the number)\n\n   Check constraint: \"只回答数字\" -> only the number. I'll output just `323`.✅",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1786362337,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-bff31798359ae6b8",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.23.1rc1.dev1327+gf25953cc5-127cca16",
+        "usage": {
+          "completion_tokens": 287,
+          "prompt_tokens": 33,
+          "prompt_tokens_details": null,
+          "total_tokens": 320
+        }
+      }
+    },
+    {
+      "elapsed_s": 2.6630719419990783,
+      "http_status": 200,
+      "id": "structured",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "{\"alpha\": 2, \"beta\": 3}",
+              "function_call": null,
+              "reasoning": "Here's a thinking process:\n\n1.  **Analyze User Request:**\n   - Return one compact JSON object\n   - Keys: `alpha` and `beta`\n   - Values: integers 2 and 3\n   - No prose (just the JSON, nothing else)\n\n2.  **Identify Required Output:**\n   - JSON format: `{\"alpha\": 2, \"beta\": 3}` or `{\"alpha\": 2, \"beta\": 3}`\n   - Must be compact (single line, no extra whitespace or formatting beyond what's necessary, but standard JSON is fine)\n   - Must have exactly keys `alpha` and `beta`\n   - Values 2 and 3 respectively\n\n3.  **Construct Output:**\n   - `{\"alpha\": 2, \"beta\": 3}`\n   - Check constraints: \n     - One compact JSON object? Yes.\n     - Keys alpha and beta? Yes.\n     - Integers 2 and 3? Yes.\n     - No prose? Yes.\n\n4.  **Final Output Generation:**\n   - Just output the JSON object, nothing else.\n   - `{\"alpha\": 2, \"beta\": 3}`",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1786362340,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-86b55d77ab9d17c1",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.23.1rc1.dev1327+gf25953cc5-127cca16",
+        "usage": {
+          "completion_tokens": 261,
+          "prompt_tokens": 39,
+          "prompt_tokens_details": null,
+          "total_tokens": 300
+        }
+      }
+    },
+    {
+      "elapsed_s": 0.580910637996567,
+      "http_status": 200,
+      "id": "tool_call",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "tool_calls",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": null,
+              "function_call": null,
+              "reasoning": "We need to call get_weather with location \"Tokyo\".",
+              "refusal": null,
+              "role": "assistant",
+              "tool_calls": [
+                {
+                  "function": {
+                    "arguments": "{\"location\": \"Tokyo\"}",
+                    "name": "get_weather"
+                  },
+                  "id": "chatcmpl-tool-86d7e19f7c485c44",
+                  "type": "function"
+                }
+              ]
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1786362343,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-89b3dc396dd4ab89",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.23.1rc1.dev1327+gf25953cc5-127cca16",
+        "usage": {
+          "completion_tokens": 38,
+          "prompt_tokens": 290,
+          "prompt_tokens_details": null,
+          "total_tokens": 328
+        }
+      }
+    },
+    {
+      "elapsed_s": 4.11906931399426,
+      "http_status": 200,
+      "id": "needle",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "annotations": null,
+              "audio": null,
+              "content": "A9Q7",
+              "function_call": null,
+              "reasoning": "Here's a thinking process:\n\n1.  **Analyze User Input:**\n   - The user provides a long repetitive text: \"filler red blue green.\" repeated many times.\n   - Then they provide: \"The verification code is A9Q7.\"\n   - Then they repeat \"filler one two three.\" many times.\n   - The actual request at the end is: \"What is the verification code? Reply with only the code.\"\n\n2.  **Identify the Core Question:**\n   - The user is asking for the verification code.\n   - In the text, it explicitly states: \"The verification code is A9Q7.\"\n\n3.  **Formulate the Answer:**\n   - The verification code is A9Q7.\n   - The instruction says: \"Reply with only the code.\"\n   - So I should just output \"A9Q7\".\n\n4.  **Check Constraints:**\n   - \"Reply with only the code.\"\n   - No extra text, no explanation.\n   - Just the code.\n\n   Output: A9Q7",
+              "refusal": null,
+              "role": "assistant"
+            },
+            "routed_experts": null,
+            "stop_reason": null,
+            "token_ids": null
+          }
+        ],
+        "created": 1786362343,
+        "ec_transfer_params": null,
+        "id": "chatcmpl-8627783baa07d8d1",
+        "kv_transfer_params": null,
+        "metrics": null,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "object": "chat.completion",
+        "prompt_logprobs": null,
+        "prompt_text": null,
+        "prompt_token_ids": null,
+        "service_tier": null,
+        "system_fingerprint": "vllm-0.23.1rc1.dev1327+gf25953cc5-127cca16",
+        "usage": {
+          "completion_tokens": 223,
+          "prompt_tokens": 8039,
+          "prompt_tokens_details": null,
+          "total_tokens": 8262
+        }
+      }
+    }
+  ],
+  "summary": {
+    "checks": {
+      "identity": true,
+      "needle": true,
+      "structured": true,
+      "tool_call": true,
+      "zh_arithmetic": true
+    },
+    "n": 5,
+    "passed": true
+  }
+}

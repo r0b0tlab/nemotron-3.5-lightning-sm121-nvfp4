@@ -1,0 +1,60 @@
+{
+  "backend": "openai_portable",
+  "drop_first_rep": true,
+  "levels": [
+    1,
+    2,
+    4,
+    6
+  ],
+  "method": "openai_portable_concurrency_ladder",
+  "output_tokens": 8192,
+  "reps": 3,
+  "rows": [
+    {
+      "aggregate_output_tok_s": 99.47010110123497,
+      "completed": 4,
+      "concurrency": 1,
+      "failed": 0,
+      "mean_e2el_ms": 61956.00935400034,
+      "median_client_output_tok_s": 99.3613287038044,
+      "output_tokens": 8192,
+      "repetitions_present": 3,
+      "warmup_rep_dropped": 1
+    },
+    {
+      "aggregate_output_tok_s": 151.6469698457452,
+      "completed": 8,
+      "concurrency": 2,
+      "failed": 0,
+      "mean_e2el_ms": 107783.10972837516,
+      "median_client_output_tok_s": 76.18829544318638,
+      "output_tokens": 8192,
+      "repetitions_present": 3,
+      "warmup_rep_dropped": 1
+    },
+    {
+      "aggregate_output_tok_s": 217.0458356879143,
+      "completed": 16,
+      "concurrency": 4,
+      "failed": 0,
+      "mean_e2el_ms": 137139.48633874953,
+      "median_client_output_tok_s": 56.70967242512869,
+      "output_tokens": 8192,
+      "repetitions_present": 3,
+      "warmup_rep_dropped": 1
+    },
+    {
+      "aggregate_output_tok_s": 252.00408605883925,
+      "completed": 24,
+      "concurrency": 6,
+      "failed": 0,
+      "mean_e2el_ms": 181201.1179166669,
+      "median_client_output_tok_s": 43.00083253028655,
+      "output_tokens": 8192,
+      "repetitions_present": 3,
+      "warmup_rep_dropped": 1
+    }
+  ],
+  "total_failed": 0
+}

@@ -1,0 +1,711 @@
+{
+  "base_url": "http://127.0.0.1:8000/v1",
+  "elapsed_s": 5894.762886935998,
+  "infra_errors_total": 0,
+  "invalid_for_publish": false,
+  "lanes": [
+    {
+      "artifacts": {
+        "canary.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/canary/canary.json"
+      },
+      "elapsed_s": 1.6668661770017934,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "canary",
+      "status": "PASS",
+      "summary": {
+        "checks": {
+          "identity": true,
+          "needle": true,
+          "structured": true,
+          "tool_call": true,
+          "zh_arithmetic": true
+        },
+        "n": 5,
+        "passed": true
+      }
+    },
+    {
+      "artifacts": {
+        "bfcl_mt.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl_mt.json",
+        "log": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl_mt.log"
+      },
+      "elapsed_s": 3745.1864246629993,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "bfcl_mt",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.38,
+        "base_url": "http://127.0.0.1:8000/v1/",
+        "category": "multi_turn_base",
+        "expected_rows": 200,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "project": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project",
+        "score": {
+          "accuracy": 0.38,
+          "correct": 76,
+          "csv": [
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/data_overall.csv",
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/data_multi_turn.csv",
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/data_agentic.csv",
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/data_live.csv",
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/data_non_live.csv",
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/data_format_sensitivity.csv"
+          ],
+          "csv_rows": [
+            "Rank,Overall Acc,Model,Model Link,Total Cost ($),Latency Mean (s),Latency Standard Deviation (s),Latency 95th Percentile (s),Non-Live AST Acc,Non-Live Simple AST,Non-Live Multiple AST,Non-Live Parallel AST,Non-Live Parallel Multiple AST,Live Acc,Live Simple AST,Live Multiple AST,Live Parallel AST,Live Parallel Multiple AST,Multi Turn Acc,Multi Turn Base,Multi Turn Miss Func,Multi Turn Miss Param,Multi Turn Long Context,Web Search Acc,Web Search Base,Web Search No Snippet,Memory Acc,Memory KV,Memory Vector,Memory Recursive Summarization,Relevance Detection,Irrelevance Detection,Format Sensitivity Max Delta,Format Sensitivity Standard Deviation,Organization,License",
+            "Rank,Model,Multi Turn Overall Acc,Base,Miss Func,Miss Param,Long Context"
+          ],
+          "primary": {
+            "accuracy": 0.38,
+            "correct_count": 76,
+            "total_count": 200
+          },
+          "primary_path": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/r0b0bench-openai-FC/multi_turn/BFCL_v4_multi_turn_base_score.json",
+          "score_files": [
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/r0b0bench-openai-FC/multi_turn/BFCL_v4_multi_turn_base_score.json",
+            "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_mt/bfcl-project/score/r0b0bench-openai-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+          ],
+          "total": 200
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "artifacts": {
+        "bfcl_ast.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_ast/bfcl_ast.json",
+        "log": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_ast/bfcl_ast.log"
+      },
+      "elapsed_s": 837.1869258129955,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "bfcl_ast",
+      "status": "PASS",
+      "summary": {
+        "base_url": "http://127.0.0.1:8000/v1/",
+        "categories": [
+          "multiple",
+          "parallel",
+          "parallel_multiple"
+        ],
+        "micro_accuracy": 0.043333333333333335,
+        "micro_correct": 26,
+        "micro_total": 600,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "project": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_ast/bfcl-ast-project",
+        "score": {
+          "categories": {
+            "multiple": {
+              "accuracy": 0.05,
+              "correct_count": 10,
+              "path": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_ast/bfcl-ast-project/score/r0b0bench-openai-FC/non_live/BFCL_v4_parallel_multiple_score.json",
+              "raw": {
+                "accuracy": 0.05,
+                "correct_count": 10,
+                "total_count": 200
+              },
+              "total_count": 200
+            },
+            "parallel": {
+              "accuracy": 0.03,
+              "correct_count": 6,
+              "path": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_ast/bfcl-ast-project/score/r0b0bench-openai-FC/non_live/BFCL_v4_parallel_score.json",
+              "raw": {
+                "accuracy": 0.03,
+                "correct_count": 6,
+                "total_count": 200
+              },
+              "total_count": 200
+            },
+            "parallel_multiple": {
+              "accuracy": 0.05,
+              "correct_count": 10,
+              "path": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/bfcl_ast/bfcl-ast-project/score/r0b0bench-openai-FC/non_live/BFCL_v4_parallel_multiple_score.json",
+              "raw": {
+                "accuracy": 0.05,
+                "correct_count": 10,
+                "total_count": 200
+              },
+              "total_count": 200
+            }
+          },
+          "micro_accuracy": 0.043333333333333335,
+          "micro_correct": 26,
+          "micro_total": 600
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "artifacts": {
+        "summary.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/latency/summary.json"
+      },
+      "elapsed_s": 7.701031903998228,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "latency",
+      "status": "PASS",
+      "summary": {
+        "drop_first_rep": true,
+        "failed": 0,
+        "method": "openai_chat_stream_c1_latency",
+        "nonstream": {
+          "e2el_ms_mean": 830.4765879984188,
+          "n_stable": 2,
+          "rows": [
+            {
+              "completion_tokens": 56,
+              "e2el_ms": 673.7629959970945,
+              "elapsed_s": 0.6737629959970945,
+              "http_status": 200,
+              "ok": true,
+              "prompt_tokens": 49,
+              "rep": 1
+            },
+            {
+              "completion_tokens": 68,
+              "e2el_ms": 822.650447000342,
+              "elapsed_s": 0.822650447000342,
+              "http_status": 200,
+              "ok": true,
+              "prompt_tokens": 49,
+              "rep": 2
+            },
+            {
+              "completion_tokens": 70,
+              "e2el_ms": 838.3027289964957,
+              "elapsed_s": 0.8383027289964957,
+              "http_status": 200,
+              "ok": true,
+              "prompt_tokens": 49,
+              "rep": 3
+            }
+          ]
+        },
+        "output_tokens": 128,
+        "reps": 5,
+        "stream": {
+          "e2el_ms_mean": 1127.051439252682,
+          "itl_ms_mean": 18.544845285347773,
+          "itl_ms_p50_mean": 18.497351374207938,
+          "itl_ms_p95_mean": 19.574961249327316,
+          "n_stable": 4,
+          "rows": [
+            {
+              "e2el_ms": 853.5053049999988,
+              "elapsed_s": 0.8535053049999988,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 18.52683839033267,
+              "itl_ms_p50": 18.61536700016586,
+              "itl_ms_p95": 19.491414997901302,
+              "ok": true,
+              "rep": 1,
+              "stream_completion_chunks": 42,
+              "text": "Copper is the standard reference material for electrical conductivity due to its exceptional atomic structure. Its face-centered cubic lattice allows electrons to move with minimal resistance, resulting in high conductivity. While silver technically conducts electricity slightly better, copper offers the optimal balance of performance, cost, and availability, making it the primary choice for wiring and printed circuit boards in modern electronics.",
+              "ttft_ms": 93.71937900141347,
+              "usage": {
+                "completion_tokens": 73,
+                "prompt_tokens": 46,
+                "total_tokens": 119
+              }
+            },
+            {
+              "e2el_ms": 1092.440168999019,
+              "elapsed_s": 1.092440168999019,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 18.50182971700736,
+              "itl_ms_p50": 18.44909600185929,
+              "itl_ms_p95": 19.522153798607178,
+              "ok": true,
+              "rep": 2,
+              "stream_completion_chunks": 54,
+              "text": "Copper is the standard reference material for electrical conductivity due to its exceptional electron mobility. At 20°C, its conductivity is approximately 5.96 × 10⁷ S/m, defined as 100% IACS (International Annealed Copper Standard). Its face-centered cubic crystal structure facilitates efficient electron flow, making it ideal for wiring and electronics. While silver exhibits slightly higher conductivity, copper offers the best balance of performance, cost, and durability.",
+              "ttft_ms": 91.68672399391653,
+              "usage": {
+                "completion_tokens": 97,
+                "prompt_tokens": 46,
+                "total_tokens": 143
+              }
+            },
+            {
+              "e2el_ms": 929.034856002545,
+              "elapsed_s": 0.929034856002545,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 18.5961085332868,
+              "itl_ms_p50": 18.577654998807702,
+              "itl_ms_p95": 19.74201980046928,
+              "ok": true,
+              "rep": 3,
+              "stream_completion_chunks": 46,
+              "text": "Copper is the standard reference material for electrical conductivity due to its exceptional atomic structure. Its face-centered cubic lattice allows electrons to move with minimal resistance, resulting in high electrical and thermal conductivity. While silver technically conducts electricity slightly better, copper offers the optimal balance of performance, cost, and durability, making it the primary choice for wiring, circuitry, and heat exchangers in modern industry.",
+              "ttft_ms": 91.97163600038039,
+              "usage": {
+                "completion_tokens": 79,
+                "prompt_tokens": 46,
+                "total_tokens": 125
+              }
+            },
+            {
+              "e2el_ms": 1369.878346005862,
+              "elapsed_s": 1.3698783460058621,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 18.515388205902553,
+              "itl_ms_p50": 18.473663498298265,
+              "itl_ms_p95": 19.55202154786093,
+              "ok": true,
+              "rep": 4,
+              "stream_completion_chunks": 69,
+              "text": "Copper is the standard reference material for electrical conductivity due to its exceptional electron mobility. At room temperature, its electrical conductivity is approximately 5.96 × 10⁷ siemens per meter, making it one of the best conductive metals available. This high conductivity arises from its face-centered cubic crystal structure and a single valence electron per atom that moves freely through the lattice. While silver technically exhibits slightly higher conductivity, copper's balance of performance, cost, and abundance makes it the primary choice for electrical wiring, printed circuit boards, and various electronic components.",
+              "ttft_ms": 91.8272370035993,
+              "usage": {
+                "completion_tokens": 115,
+                "prompt_tokens": 46,
+                "total_tokens": 161
+              }
+            },
+            {
+              "e2el_ms": 1116.852386003302,
+              "elapsed_s": 1.116852386003302,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 18.566054685194374,
+              "itl_ms_p50": 18.488990997866495,
+              "itl_ms_p95": 19.483649850371872,
+              "ok": true,
+              "rep": 5,
+              "stream_completion_chunks": 55,
+              "text": "Copper is the standard reference material for electrical conductivity due to its exceptional electron mobility. At 20°C, its conductivity is approximately 5.96 × 10⁷ S/m, defined as 100% IACS (International Annealed Copper Standard). Its face-centered cubic crystal structure facilitates efficient electron flow, making it ideal for wiring and electronics. While silver exhibits slightly higher conductivity, copper offers the best balance of performance, cost, and availability.",
+              "ttft_ms": 93.83062700362643,
+              "usage": {
+                "completion_tokens": 97,
+                "prompt_tokens": 46,
+                "total_tokens": 143
+              }
+            }
+          ],
+          "ttft_ms_mean": 92.32905600038066
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "summary.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/concurrency/summary.json"
+      },
+      "elapsed_s": 154.039878030002,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "concurrency",
+      "status": "PASS",
+      "summary": {
+        "backend": "openai_portable",
+        "drop_first_rep": true,
+        "levels": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "method": "openai_portable_concurrency_ladder",
+        "output_tokens": 512,
+        "reps": 3,
+        "rows": [
+          {
+            "aggregate_output_tok_s": 103.4110380693415,
+            "completed": 4,
+            "concurrency": 1,
+            "failed": 0,
+            "mean_e2el_ms": 4950.851057998079,
+            "median_client_output_tok_s": 103.4165907050544,
+            "output_tokens": 512,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          },
+          {
+            "aggregate_output_tok_s": 180.46525700241665,
+            "completed": 8,
+            "concurrency": 2,
+            "failed": 0,
+            "mean_e2el_ms": 5679.975541500426,
+            "median_client_output_tok_s": 90.48500865134481,
+            "output_tokens": 512,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          },
+          {
+            "aggregate_output_tok_s": 304.27641444286087,
+            "completed": 16,
+            "concurrency": 4,
+            "failed": 0,
+            "mean_e2el_ms": 6727.099266061941,
+            "median_client_output_tok_s": 76.13992786047883,
+            "output_tokens": 512,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          },
+          {
+            "aggregate_output_tok_s": 376.3154235825983,
+            "completed": 24,
+            "concurrency": 6,
+            "failed": 0,
+            "mean_e2el_ms": 8159.379284458737,
+            "median_client_output_tok_s": 62.764881206949575,
+            "output_tokens": 512,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          }
+        ],
+        "total_failed": 0
+      }
+    },
+    {
+      "artifacts": {
+        "summary.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/throughput/summary.json"
+      },
+      "elapsed_s": 115.284769650003,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "throughput",
+      "status": "PASS",
+      "summary": {
+        "backend": "openai_portable",
+        "decode": {
+          "mean_client_output_tok_s": 90.94535656360449,
+          "median_client_output_tok_s": 90.95360678348186,
+          "n_stable": 4,
+          "output_tokens_requested": 2048,
+          "reps": 5,
+          "rows": [
+            {
+              "client_output_tokens_per_second": 90.42981256528996,
+              "completion_tokens": 2048,
+              "elapsed_s": 22.647398484004952,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 1,
+              "server_prompt_tokens_per_second": 2.6493109149987295
+            },
+            {
+              "client_output_tokens_per_second": 90.9121693199158,
+              "completion_tokens": 2048,
+              "elapsed_s": 22.527237171001616,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 2,
+              "server_prompt_tokens_per_second": 2.6634424605444083
+            },
+            {
+              "client_output_tokens_per_second": 90.44832662899773,
+              "completion_tokens": 2048,
+              "elapsed_s": 22.642762739000318,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 3,
+              "server_prompt_tokens_per_second": 2.6498533192089178
+            },
+            {
+              "client_output_tokens_per_second": 90.99504424704793,
+              "completion_tokens": 2048,
+              "elapsed_s": 22.506720195000526,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 4,
+              "server_prompt_tokens_per_second": 2.6658704369252324
+            },
+            {
+              "client_output_tokens_per_second": 91.42588605845647,
+              "completion_tokens": 2048,
+              "elapsed_s": 22.400657935002528,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 5,
+              "server_prompt_tokens_per_second": 2.678492755618842
+            }
+          ]
+        },
+        "drop_first_rep": true,
+        "failed": 0,
+        "method": "openai_portable_c1_throughput",
+        "prefill": {
+          "mean_server_prompt_tok_s": 28815.64292954854,
+          "median_prompt_tokens": 24541.0,
+          "median_server_prompt_tok_s": 28815.64292954854,
+          "n_stable": 2,
+          "note": "prompt tok/s is e2e wall proxy (includes short decode); not pure prefill kernel metric",
+          "output_tokens": 16,
+          "prompt_tokens_target": 14000,
+          "reps": 3,
+          "rows": [
+            {
+              "client_output_tokens_per_second": 18.76015823738354,
+              "completion_tokens": 16,
+              "elapsed_s": 0.8528712709958199,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "prefill",
+              "ok": true,
+              "prompt_tokens": 24541,
+              "rep": 1,
+              "server_prompt_tokens_per_second": 28774.56520647684
+            },
+            {
+              "client_output_tokens_per_second": 18.77333192954074,
+              "completion_tokens": 16,
+              "elapsed_s": 0.8522727910021786,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "prefill",
+              "ok": true,
+              "prompt_tokens": 24541,
+              "rep": 2,
+              "server_prompt_tokens_per_second": 28794.771180178705
+            },
+            {
+              "client_output_tokens_per_second": 18.800547445609144,
+              "completion_tokens": 16,
+              "elapsed_s": 0.8510390480005299,
+              "finish_reason": "length",
+              "http_status": 200,
+              "kind": "prefill",
+              "ok": true,
+              "prompt_tokens": 24541,
+              "rep": 3,
+              "server_prompt_tokens_per_second": 28836.514678918375
+            }
+          ]
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "niah.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/niah/niah.json"
+      },
+      "elapsed_s": 2.957804716003011,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "niah",
+      "status": "PASS",
+      "summary": {
+        "all_passed": true,
+        "code": "R0B0-NIAH-7K3M",
+        "depth_policy": "frac_of_max_context",
+        "depths": [
+          12440,
+          24880,
+          44784
+        ],
+        "fractions": [
+          0.25,
+          0.5,
+          0.9
+        ],
+        "generation_reserve": 256,
+        "kv_cache_size_tokens": 11753760,
+        "marker": "R0B0BENCH_NIAH_SLOT",
+        "max_model_len": 50016,
+        "note": "Depths are always 25/50/90% of (max_model_len - generation_reserve). This is the standard max-context capacity package; physical KV shortfall surfaces as infra ERROR.",
+        "pass_count": 3,
+        "rows": [
+          {
+            "depth": 12440,
+            "elapsed_s": 0.7878220990023692,
+            "finish_reason": "stop",
+            "fraction_of_usable": 0.25,
+            "http_status": 200,
+            "infra_errors": 0,
+            "max_model_len": 50016,
+            "needle_fraction_effective": 0.4991961414790997,
+            "passed": true,
+            "prompt_sha256": "1095cdcf0fbf5a82475c36d687c88615e414ee1a95eeb04fb411412722d0fa42",
+            "prompt_tokens_constructed": 12440,
+            "response_text": "R0B0-NIAH-7K3M",
+            "status": "PASS",
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 12440,
+              "prompt_tokens_details": null,
+              "total_tokens": 12453
+            }
+          },
+          {
+            "depth": 24880,
+            "elapsed_s": 0.8372956279999926,
+            "finish_reason": "stop",
+            "fraction_of_usable": 0.5,
+            "http_status": 200,
+            "infra_errors": 0,
+            "max_model_len": 50016,
+            "needle_fraction_effective": 0.4995980707395498,
+            "passed": true,
+            "prompt_sha256": "77fd01a31f650f2cc0b13b983a9ac290d8c03e15182ca3ac5ea83aa54f04a22a",
+            "prompt_tokens_constructed": 24880,
+            "response_text": "R0B0-NIAH-7K3M",
+            "status": "PASS",
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 24880,
+              "prompt_tokens_details": null,
+              "total_tokens": 24893
+            }
+          },
+          {
+            "depth": 44784,
+            "elapsed_s": 0.983386102001532,
+            "finish_reason": "stop",
+            "fraction_of_usable": 0.9,
+            "http_status": 200,
+            "infra_errors": 0,
+            "max_model_len": 50016,
+            "needle_fraction_effective": 0.4997767059664166,
+            "passed": true,
+            "prompt_sha256": "ec69c7c8c9bf9cdca4ed3879d1dcbaf991f1e68c7ac343478e4741463cfb641e",
+            "prompt_tokens_constructed": 44784,
+            "response_text": "R0B0-NIAH-7K3M",
+            "status": "PASS",
+            "usage": {
+              "completion_tokens": 13,
+              "prompt_tokens": 44784,
+              "prompt_tokens_details": null,
+              "total_tokens": 44797
+            }
+          }
+        ],
+        "template_source": "server:/v1/chat/completions/render",
+        "tokenizer": {
+          "backend": "tokenizers",
+          "path": "model-assets/tokenizer.json"
+        },
+        "total": 3
+      }
+    },
+    {
+      "artifacts": {
+        "qa.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/qa/qa.json"
+      },
+      "elapsed_s": 41.99096265099797,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "qa",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.9525,
+        "concurrency": 2,
+        "correct": 381,
+        "data_path": "datasets/qa/arc_easy_test.jsonl",
+        "dataset": "allenai/ai2_arc ARC-Easy test",
+        "infra_http_errors": 0,
+        "method": "arc_easy_mc_letter",
+        "n": 400,
+        "wilson95": {
+          "high": 0.9693831678923314,
+          "low": 0.9270078923649577
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "ifeval.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/ifeval/ifeval.json"
+      },
+      "elapsed_s": 522.2188352070007,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "ifeval",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.775,
+        "concurrency": 2,
+        "correct": 155,
+        "data_path": "datasets/ifeval/input_data.jsonl",
+        "infra_http_errors": 0,
+        "method": "ifeval_lightweight_constraint_scorer",
+        "n": 200,
+        "note": "Not full official IFEval scorer; common instruction families only. Label as lightweight.",
+        "wilson95": {
+          "high": 0.8273771621308439,
+          "low": 0.7122575346140798
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "humaneval.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/humaneval/humaneval.json",
+        "samples.jsonl": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/humaneval/samples.jsonl"
+      },
+      "elapsed_s": 159.14779383099813,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "humaneval",
+      "status": "PASS",
+      "summary": {
+        "concurrency": 2,
+        "data_path": "datasets/humaneval/HumanEval.jsonl",
+        "eval_error": null,
+        "infra_http_errors": 0,
+        "method": "humaneval_functional_correctness",
+        "n": 164,
+        "pass@1": 0.8597560975609756,
+        "pass_at": {
+          "pass@1": 0.8597560975609756
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "gsm8k.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/lanes/gsm8k/gsm8k.json"
+      },
+      "elapsed_s": 307.3504923270011,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "gsm8k",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.945,
+        "concurrency": 2,
+        "correct": 189,
+        "data_path": "datasets/gsm8k/test.jsonl",
+        "infra_http_errors": 0,
+        "method": "gsm8k_0shot_flexible_extract",
+        "n": 200,
+        "seed": 0,
+        "wilson95": {
+          "high": 0.9690149791986299,
+          "low": 0.9042120755340645
+        }
+      }
+    }
+  ],
+  "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "profile": "core-subset",
+  "r0b0bench_version": "1.0.0rc2",
+  "run_id": "nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z",
+  "schema_version": 2,
+  "started_utc": "2026-08-10T10:35:46.002738+00:00",
+  "systems_lanes": [
+    "canary",
+    "bfcl_mt",
+    "bfcl_ast",
+    "latency",
+    "concurrency",
+    "throughput",
+    "niah"
+  ]
+}

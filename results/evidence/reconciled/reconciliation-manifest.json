@@ -1,0 +1,68 @@
+{
+  "status": "PASS_WITH_DISCLOSURE",
+  "report": "results/evidence/reconciled/report.json",
+  "retained_full_run": "results/evidence/full-native-thinking/report.json",
+  "replacement_gsm8k_run": "results/evidence/gsm8k-retest/report.json",
+  "lane_order": [
+    "canary",
+    "bfcl_mt",
+    "bfcl_ast",
+    "latency",
+    "concurrency",
+    "throughput",
+    "niah",
+    "qa",
+    "ifeval",
+    "humaneval",
+    "gsm8k"
+  ],
+  "all_lane_statuses": {
+    "canary": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "bfcl_mt": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "bfcl_ast": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "latency": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "concurrency": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "throughput": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "niah": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "qa": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "ifeval": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "humaneval": {
+      "status": "PASS",
+      "infra_errors": 0
+    },
+    "gsm8k": {
+      "status": "PASS",
+      "infra_errors": 0
+    }
+  },
+  "all_lane_statuses_pass": true,
+  "publication_eligibility": false,
+  "publication_note": "Secondary reconciled evidence; not a single-process full-suite run."
+}

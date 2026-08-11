@@ -1,0 +1,352 @@
+{
+  "file_count": 69,
+  "files": [
+    {
+      "bytes": 136,
+      "path": ".gitattributes",
+      "sha256": "0da4d008c178813dc32767cc5a658d86716b1f0bafd73f75d5af84ddfddffe37"
+    },
+    {
+      "bytes": 317,
+      "path": ".gitignore",
+      "sha256": "74e061b710f7e8470952b58d3adc2bab19a91e21249f3d0c4cd805b2acb18c34"
+    },
+    {
+      "bytes": 3545,
+      "path": "AGENTS.md",
+      "sha256": "9269fb015831fb8bde883fb85e28bedbdc70c54fabfa43b7b5c68b1d71554dfc"
+    },
+    {
+      "bytes": 1065,
+      "path": "LICENSE",
+      "sha256": "a6557ec2636cd473218da7e6746eab240eaf9e974321badea7eccdf0b86b0614"
+    },
+    {
+      "bytes": 7895,
+      "path": "README.md",
+      "sha256": "cd208df4a1c1e7fcfd297393dd4695f7a9525f359bd2b3f33dd2d139e4faf624"
+    },
+    {
+      "bytes": 1015,
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "d863affc26102348e4012be387954336391e4e964bcb6659c892de8c95f7d272"
+    },
+    {
+      "bytes": 1065,
+      "path": "benchmark/LICENSE",
+      "sha256": "a6557ec2636cd473218da7e6746eab240eaf9e974321badea7eccdf0b86b0614"
+    },
+    {
+      "bytes": 1087,
+      "path": "benchmark/README.md",
+      "sha256": "b47f8abe5556640b49165fe3641ce1707ff769e7d3584f95b6757194b4031e7e"
+    },
+    {
+      "bytes": 845,
+      "path": "benchmark/pyproject.toml",
+      "sha256": "b09b0527d8543bef492e58f0f5c9ef8a3e3140d4cb2f4973a4187498e463f6d1"
+    },
+    {
+      "bytes": 9007,
+      "path": "benchmark/scripts/bfcl/bfcl_ast_run.py",
+      "sha256": "888d66a68d8f6e30e27cc46f22b6208e8c8ccdd4ddb04eeed044d68f5b8e9dce"
+    },
+    {
+      "bytes": 8772,
+      "path": "benchmark/scripts/bfcl/bfcl_run.py",
+      "sha256": "234fdb52b2c28925c1290fce6a2d29d45f315609bc3011447be93bca7489bd64"
+    },
+    {
+      "bytes": 6931,
+      "path": "benchmark/scripts/rebuild_results_index.py",
+      "sha256": "da516dc482ba1d7faf59bcf30b99c2617fb902663384d652627e0a8a38babb0d"
+    },
+    {
+      "bytes": 581,
+      "path": "benchmark/source-state.json",
+      "sha256": "0c9ae494f95516c2c130411f083e0897c3c4edf14d2684dfcc76d1e2bd806f7c"
+    },
+    {
+      "bytes": 546,
+      "path": "benchmark/src/r0b0bench/__init__.py",
+      "sha256": "3d37d36f346e325848e2762f79e5ada2b3b2e5829f69170a5db24024ff06abed"
+    },
+    {
+      "bytes": 12925,
+      "path": "benchmark/src/r0b0bench/cli.py",
+      "sha256": "521f1d21ad7b51e79b58615ec16636bb7993667d76e3cd77246324278601d7b9"
+    },
+    {
+      "bytes": 3110,
+      "path": "benchmark/src/r0b0bench/config.py",
+      "sha256": "74cf99025fe11db4f926b75140a0977a6fa5673beb101bd4444a7d6ca043f0d0"
+    },
+    {
+      "bytes": 8384,
+      "path": "benchmark/src/r0b0bench/endpoint.py",
+      "sha256": "7617bb921ae9bf036f1e17f2ad3253bdcc8dfc766ea32d1c2195e47e5882be1e"
+    },
+    {
+      "bytes": 63,
+      "path": "benchmark/src/r0b0bench/lanes/__init__.py",
+      "sha256": "b27c5cb0f2c79e65f3e5a44275e05777ba834aa1e6b8b90fc24e1fdc3681b4ba"
+    },
+    {
+      "bytes": 12787,
+      "path": "benchmark/src/r0b0bench/lanes/bfcl.py",
+      "sha256": "44264eae30d64b8e42cc5fe5f0bbcf2ef5613c6b81f15b0ec0ee8096e6ab763f"
+    },
+    {
+      "bytes": 4926,
+      "path": "benchmark/src/r0b0bench/lanes/canary.py",
+      "sha256": "fbd85d68fdd5117c3d25ffebfaec616476364e30f91e425afde09f58031c22b5"
+    },
+    {
+      "bytes": 5101,
+      "path": "benchmark/src/r0b0bench/lanes/concurrency.py",
+      "sha256": "2ae592f8e939f2e0c8c5af2bed20dfa48a868438b8ec42c7a8e68dba9f6adee3"
+    },
+    {
+      "bytes": 4276,
+      "path": "benchmark/src/r0b0bench/lanes/latency.py",
+      "sha256": "6d408deeeff6a4f18c76579fbdc6660f2f65d3d5fc769edb881c0afcbd6e0c73"
+    },
+    {
+      "bytes": 12176,
+      "path": "benchmark/src/r0b0bench/lanes/niah.py",
+      "sha256": "9912f290175035b7f9135267a120599ec1d80660179c7b570ae1d501ab2ed292"
+    },
+    {
+      "bytes": 3802,
+      "path": "benchmark/src/r0b0bench/lanes/perf.py",
+      "sha256": "71cad43f33f83e2b9d79f6c04417be2841be5bab44c8432f8be62be854a75b33"
+    },
+    {
+      "bytes": 18866,
+      "path": "benchmark/src/r0b0bench/lanes/quality.py",
+      "sha256": "2a5ed6dc4e1b4faacc5765d31d79910950cbddc01ff71a11b4ea3bd91581152b"
+    },
+    {
+      "bytes": 5520,
+      "path": "benchmark/src/r0b0bench/lanes/throughput.py",
+      "sha256": "99d3c38b2124f0ce1f616b0ae807ccbfaf8b54a439a4b5863e02fcf750372cc5"
+    },
+    {
+      "bytes": 0,
+      "path": "benchmark/src/r0b0bench/profiles/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1501,
+      "path": "benchmark/src/r0b0bench/profiles/_systems_block.yaml",
+      "sha256": "e7e19334e5a472aa8d0b8c1d559062443623aeaa49ec01afe49a149ad4618c9e"
+    },
+    {
+      "bytes": 713,
+      "path": "benchmark/src/r0b0bench/profiles/core.yaml",
+      "sha256": "3c9e53373739e8c752550390ed31a9875c853ee403731ebeef6a60df6dbae5b3"
+    },
+    {
+      "bytes": 892,
+      "path": "benchmark/src/r0b0bench/profiles/core_subset.yaml",
+      "sha256": "27d041a314b7cf197652da10cc1d698f3b2c10981e16bd88c2cb5ec06379af91"
+    },
+    {
+      "bytes": 413,
+      "path": "benchmark/src/r0b0bench/profiles/systems.yaml",
+      "sha256": "841952a12857c2e92c7419c916d8fc29c7841981f08ba8e52626f9e14a92016b"
+    },
+    {
+      "bytes": 10524,
+      "path": "benchmark/src/r0b0bench/results_ledger.py",
+      "sha256": "1ccbb4d04a0763d22c9267aced1be396d29b14833b9212638538f532b114f246"
+    },
+    {
+      "bytes": 654,
+      "path": "benchmark/tests/test_profiles.py",
+      "sha256": "d92318f8413dd6eb2e3537c8531589de291c56442bb1976e9df74b2d391618de"
+    },
+    {
+      "bytes": 20402,
+      "path": "benchmark/thinking-allowed.patch",
+      "sha256": "a243d10350cf83aa6dc7019d15198e2fae59cfad953a98506a638d973b961200"
+    },
+    {
+      "bytes": 1404,
+      "path": "results/README.md",
+      "sha256": "a1cca3243a27f6794018a14527ea10b342ccd16149593b843e73f2994e28f896"
+    },
+    {
+      "bytes": 10893,
+      "path": "results/campaign-handoff.json",
+      "sha256": "57cef0c8fa4c7d2fab3db9fdb40d34de29c051b8a86d9511fa1e21e626ffdb6a"
+    },
+    {
+      "bytes": 7009,
+      "path": "results/campaign-handoff.md",
+      "sha256": "b9048ddc855df86b8485b4b1ead1a4e5e46fde6c948973b6d46f4e0eaa3ba86e"
+    },
+    {
+      "bytes": 4964,
+      "path": "results/campaign-manifest.json",
+      "sha256": "03b174c39a577da494142538bc9cb5c68e3391206c59d174272df890d38431a3"
+    },
+    {
+      "bytes": 1263,
+      "path": "results/evidence/INVENTORY.md",
+      "sha256": "bd4040b51b48796e26bb38427b9bd637b1f19426f8f66a30d62b2cb7fac5c11e"
+    },
+    {
+      "bytes": 15136,
+      "path": "results/evidence/base-ar-control/report.json",
+      "sha256": "a64e25eb9d45b9ab344c644648b4a9ddb5a1fadf82eb24efd2972c123ced3108"
+    },
+    {
+      "bytes": 1670,
+      "path": "results/evidence/full-native-thinking/lanes/bfcl_ast/bfcl_ast.json",
+      "sha256": "c52e6aecad62bd7418ea6b68382347fa1f4361be08b381025be5ccc97471e10d"
+    },
+    {
+      "bytes": 2336,
+      "path": "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl_mt.json",
+      "sha256": "5731c714297507208545fc45518de2869e9f2c6c2e853dcebc184aa264b81613"
+    },
+    {
+      "bytes": 10409,
+      "path": "results/evidence/full-native-thinking/lanes/canary/canary.json",
+      "sha256": "af21e23cb27211ad0151da9f8b52573eabae9ccdab9f80d52a935dea8241f0f6"
+    },
+    {
+      "bytes": 1500,
+      "path": "results/evidence/full-native-thinking/lanes/concurrency/summary.json",
+      "sha256": "07888795139c85d4f179ad5091d3b80aaf7118ec8ae235ab3a015278cc5cd3cc"
+    },
+    {
+      "bytes": 71493,
+      "path": "results/evidence/full-native-thinking/lanes/humaneval/humaneval.json",
+      "sha256": "a86b6481bdacbfa63675f615747f8cef3025ce1d20e385dde8072ed714eb49c4"
+    },
+    {
+      "bytes": 221809,
+      "path": "results/evidence/full-native-thinking/lanes/ifeval/ifeval.json",
+      "sha256": "6de4ae85cb2dc506aeda1db297f54dc6107f85d0e9179e6d41d9ffe8325f8361"
+    },
+    {
+      "bytes": 6372,
+      "path": "results/evidence/full-native-thinking/lanes/latency/summary.json",
+      "sha256": "20c737beab1cbd0521bdf1fc986579cdc2dead56d1c470b18227e0c628c6f9d3"
+    },
+    {
+      "bytes": 4146,
+      "path": "results/evidence/full-native-thinking/lanes/niah/niah.json",
+      "sha256": "05b6524548119a6a711e06d64b43bbf1c900b9d272b78141fd82afe91cbf79da"
+    },
+    {
+      "bytes": 77060,
+      "path": "results/evidence/full-native-thinking/lanes/qa/qa.json",
+      "sha256": "d2fc98b2f1dfc68820bca374545bdbebab1fd273fd5d7b8e592c904f921f3c41"
+    },
+    {
+      "bytes": 3685,
+      "path": "results/evidence/full-native-thinking/lanes/throughput/summary.json",
+      "sha256": "a8e4f9ca5d144778888f88596015545080fc9246e97ad1bc1178241c52666ee5"
+    },
+    {
+      "bytes": 1043,
+      "path": "results/evidence/full-native-thinking/protocol.json",
+      "sha256": "1d8e03002bc39d4abea2f39622bf3733b51d9c30d0165f5ff8e1a15c0a0d8def"
+    },
+    {
+      "bytes": 28536,
+      "path": "results/evidence/full-native-thinking/report.json",
+      "sha256": "ce7e8f99e65b63586f80fd2d0e9e6516b22988bcc32228c49e344a58d672b97c"
+    },
+    {
+      "bytes": 2392,
+      "path": "results/evidence/gsm8k-retest/gsm8k-retest-audit.json",
+      "sha256": "96336ecf16f79e6206871edba58d8c591aa48a80f35659733946de24442c287e"
+    },
+    {
+      "bytes": 214150,
+      "path": "results/evidence/gsm8k-retest/gsm8k.json",
+      "sha256": "2ee92a0f54edd9f64a7a693944f0616e5a79a52fbaf4367c75de01fce515331a"
+    },
+    {
+      "bytes": 614,
+      "path": "results/evidence/gsm8k-retest/lane_result.json",
+      "sha256": "cd15ad8c8d88c009b322f966ccd5d313342cec432202ad2bb7604a607da75cd8"
+    },
+    {
+      "bytes": 1212,
+      "path": "results/evidence/gsm8k-retest/report.json",
+      "sha256": "70d4af692469b10c464f49708fb55814577a63b212df8a50de0ca10b06cfd15d"
+    },
+    {
+      "bytes": 29127,
+      "path": "results/evidence/primary-thinking-off/report.json",
+      "sha256": "d0b784a1ebd9e0923bb09b2cc4434292240c9e41a12b4842a77e839bce023351"
+    },
+    {
+      "bytes": 1409,
+      "path": "results/evidence/reconciled/reconciliation-manifest.json",
+      "sha256": "4f36cea76269aca886a943e1f73d0b9fc4b8078e612891731118a4ac118a295f"
+    },
+    {
+      "bytes": 29745,
+      "path": "results/evidence/reconciled/report.json",
+      "sha256": "9379617c95e710cac15ae638ad5016bc3409943fede59c9a8f10ef575be6eb77"
+    },
+    {
+      "bytes": 883,
+      "path": "runtime/Dockerfile",
+      "sha256": "dea6edf695d859eff11e34a4f82f9e6f17f69d49756b526ba598fb196fb2b893"
+    },
+    {
+      "bytes": 958,
+      "path": "runtime/README.md",
+      "sha256": "f1829866c6999c74fe406e239256e2451fbe55fde172b10f17e9087c4b1b3395"
+    },
+    {
+      "bytes": 2815,
+      "path": "runtime/container_audit.py",
+      "sha256": "a9f2c557c8fe34559b2fc20b46a1ce62ef60b501140e80ddb365a59b80d3a480"
+    },
+    {
+      "bytes": 607,
+      "path": "runtime/image-provenance.json",
+      "sha256": "dab85ccb54495dada368746b9af092a346565793294f88a29e4bb0e1d9c64095"
+    },
+    {
+      "bytes": 2862,
+      "path": "runtime/launch.sh",
+      "sha256": "f66219d304b1b7f094687b471d3aa5b02c346aa0cfdbe01970d719377f971164"
+    },
+    {
+      "bytes": 1370,
+      "path": "runtime/runtime-contract.json",
+      "sha256": "02ce3145577c4dbb81ee16ea9db8864677f82bd1461090007da30b600ba7658c"
+    },
+    {
+      "bytes": 1315,
+      "path": "runtime/verify_sm121.sh",
+      "sha256": "ad3e4b9d8120ffc0098748544d4dfaa843e6926a481645f1defa92d241817dc8"
+    },
+    {
+      "bytes": 2198,
+      "path": "scripts/reconcile_results.py",
+      "sha256": "53aec0c0eee5a39aa84ea08b91724620f2feec49590350eab0e679bf27925320"
+    },
+    {
+      "bytes": 1231,
+      "path": "scripts/run_benchmark.sh",
+      "sha256": "59cb5414531fe94484e6e9c07f29ef01407b802a3113ce00fc01836643d32e7b"
+    },
+    {
+      "bytes": 1303,
+      "path": "scripts/verify_results.py",
+      "sha256": "7e28ed659e7c7b81a06ce2fd701ee7273fee9e6dcbef1c5957be0febfdb167cc"
+    }
+  ],
+  "schema_version": 1,
+  "visibility": "private"
+}

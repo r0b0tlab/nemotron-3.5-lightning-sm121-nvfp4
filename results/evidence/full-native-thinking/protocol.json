@@ -1,0 +1,31 @@
+{
+  "protocol": "allowed-response-native-thinking-v1",
+  "status": "active_run",
+  "source_head": "e0f0bf667d3ea8e97f2a9c4453f94201173c7082",
+  "source_diff_sha256": "a89df0b6ac9846d5ee3342ecf997a948f993c21b093700a6e53a538db452f149",
+  "template_controls": {
+    "thinking": true,
+    "enable_thinking": true
+  },
+  "response_ceiling_tokens": 8192,
+  "lane_ceilings": {
+    "canary": 8192,
+    "bfcl_mt": 8192,
+    "bfcl_ast": 8192,
+    "latency": 8192,
+    "concurrency": 8192,
+    "throughput_decode": 8192,
+    "throughput_prefill": 8192,
+    "qa": 8192,
+    "ifeval": 8192,
+    "humaneval": 8192,
+    "gsm8k": 8192,
+    "niah_generation_reserve": 8192
+  },
+  "classification": {
+    "harness_caused_finish_reason_length": "protocol_invalid_diagnostic",
+    "http_or_engine_failure": "infrastructure_error",
+    "model_wrong_or_empty_answer_after_allowed_response": "scoreable_model_result"
+  },
+  "prior_invalid_epoch": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-on-full-core-subset-20260810T034056Z/report.json"
+}

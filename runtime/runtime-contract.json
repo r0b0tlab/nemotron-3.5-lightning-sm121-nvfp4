@@ -1,0 +1,45 @@
+{
+  "visibility": "private",
+  "model_checkpoint": {
+    "mount_env": "MODEL_CKPT",
+    "architecture": "NemotronHForCausalLM",
+    "model_type": "nemotron_h",
+    "total_parameters": "30B",
+    "active_parameters": "3B",
+    "max_position_embeddings": 262144,
+    "shards": 52,
+    "trained_mtp_tensors": true,
+    "mtp_layers": 1,
+    "quantization": "mixed FP8/W4A16_NVFP4",
+    "kv_cache": "FP8"
+  },
+  "active_profile": {
+    "mode": "mtp",
+    "num_speculative_tokens": 1,
+    "target_moe_backend": "marlin",
+    "drafter_moe_backend": "triton",
+    "max_model_len": 50016,
+    "max_num_batched_tokens": 8192,
+    "max_num_seqs": 6,
+    "gpu_memory_utilization": 0.70,
+    "prefix_caching": true,
+    "kv_cache_dtype": "fp8",
+    "served_model_name": "nvidia/nemotron-3.5-lightning-30b-a3b"
+  },
+  "runtime": {
+    "base_image": "vllm/vllm-openai@sha256:3af90144a0926e5c5fe46ee16e5201e763dd854538b9d7ce433755f11dadaf78",
+    "wrapper_image": "nemotron-lightning-vllm:private-sm121-mtp",
+    "vllm": "0.23.1rc1.dev1327+gf25953cc5",
+    "torch": "2.11.0+cu129",
+    "flashinfer": "0.6.14",
+    "fastokens": "0.3.1",
+    "platform": "linux/arm64",
+    "device": "NVIDIA GB10 / SM121"
+  },
+  "privacy": {
+    "weights_in_repository": false,
+    "credentials_in_repository": false,
+    "runtime_cache_in_repository": false,
+    "public_release_authorized": false
+  }
+}

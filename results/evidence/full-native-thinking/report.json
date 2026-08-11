@@ -1,0 +1,711 @@
+{
+  "base_url": "http://127.0.0.1:8000/v1",
+  "elapsed_s": 25525.733004209003,
+  "infra_errors_total": 0,
+  "invalid_for_publish": false,
+  "lanes": [
+    {
+      "artifacts": {
+        "canary.json": "results/evidence/full-native-thinking/lanes/canary/canary.json"
+      },
+      "elapsed_s": 12.948317386006238,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "canary",
+      "status": "PASS",
+      "summary": {
+        "checks": {
+          "identity": true,
+          "needle": true,
+          "structured": true,
+          "tool_call": true,
+          "zh_arithmetic": true
+        },
+        "n": 5,
+        "passed": true
+      }
+    },
+    {
+      "artifacts": {
+        "bfcl_mt.json": "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl_mt.json",
+        "log": "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl_mt.log"
+      },
+      "elapsed_s": 6816.531515824994,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "bfcl_mt",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.665,
+        "base_url": "http://127.0.0.1:8000/v1/",
+        "category": "multi_turn_base",
+        "expected_rows": 200,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "project": "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project",
+        "score": {
+          "accuracy": 0.665,
+          "correct": 133,
+          "csv": [
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/data_overall.csv",
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/data_multi_turn.csv",
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/data_agentic.csv",
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/data_live.csv",
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/data_non_live.csv",
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/data_format_sensitivity.csv"
+          ],
+          "csv_rows": [
+            "Rank,Overall Acc,Model,Model Link,Total Cost ($),Latency Mean (s),Latency Standard Deviation (s),Latency 95th Percentile (s),Non-Live AST Acc,Non-Live Simple AST,Non-Live Multiple AST,Non-Live Parallel AST,Non-Live Parallel Multiple AST,Live Acc,Live Simple AST,Live Multiple AST,Live Parallel AST,Live Parallel Multiple AST,Multi Turn Acc,Multi Turn Base,Multi Turn Miss Func,Multi Turn Miss Param,Multi Turn Long Context,Web Search Acc,Web Search Base,Web Search No Snippet,Memory Acc,Memory KV,Memory Vector,Memory Recursive Summarization,Relevance Detection,Irrelevance Detection,Format Sensitivity Max Delta,Format Sensitivity Standard Deviation,Organization,License",
+            "Rank,Model,Multi Turn Overall Acc,Base,Miss Func,Miss Param,Long Context"
+          ],
+          "primary": {
+            "accuracy": 0.665,
+            "correct_count": 133,
+            "total_count": 200
+          },
+          "primary_path": "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/r0b0bench-openai-FC/multi_turn/BFCL_v4_multi_turn_base_score.json",
+          "score_files": [
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/r0b0bench-openai-FC/multi_turn/BFCL_v4_multi_turn_base_score.json",
+            "results/evidence/full-native-thinking/lanes/bfcl_mt/bfcl-project/score/r0b0bench-openai-FC/multi_turn/BFCL_v4_multi_turn_base_score.json"
+          ],
+          "total": 200
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "artifacts": {
+        "bfcl_ast.json": "results/evidence/full-native-thinking/lanes/bfcl_ast/bfcl_ast.json",
+        "log": "results/evidence/full-native-thinking/lanes/bfcl_ast/bfcl_ast.log"
+      },
+      "elapsed_s": 5721.382357392002,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "bfcl_ast",
+      "status": "PASS",
+      "summary": {
+        "base_url": "http://127.0.0.1:8000/v1/",
+        "categories": [
+          "multiple",
+          "parallel",
+          "parallel_multiple"
+        ],
+        "micro_accuracy": 0.2916666666666667,
+        "micro_correct": 175,
+        "micro_total": 600,
+        "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "project": "results/evidence/full-native-thinking/lanes/bfcl_ast/bfcl-ast-project",
+        "score": {
+          "categories": {
+            "multiple": {
+              "accuracy": 0.19,
+              "correct_count": 38,
+              "path": "results/evidence/full-native-thinking/lanes/bfcl_ast/bfcl-ast-project/score/r0b0bench-openai-FC/non_live/BFCL_v4_parallel_multiple_score.json",
+              "raw": {
+                "accuracy": 0.19,
+                "correct_count": 38,
+                "total_count": 200
+              },
+              "total_count": 200
+            },
+            "parallel": {
+              "accuracy": 0.495,
+              "correct_count": 99,
+              "path": "results/evidence/full-native-thinking/lanes/bfcl_ast/bfcl-ast-project/score/r0b0bench-openai-FC/non_live/BFCL_v4_parallel_score.json",
+              "raw": {
+                "accuracy": 0.495,
+                "correct_count": 99,
+                "total_count": 200
+              },
+              "total_count": 200
+            },
+            "parallel_multiple": {
+              "accuracy": 0.19,
+              "correct_count": 38,
+              "path": "results/evidence/full-native-thinking/lanes/bfcl_ast/bfcl-ast-project/score/r0b0bench-openai-FC/non_live/BFCL_v4_parallel_multiple_score.json",
+              "raw": {
+                "accuracy": 0.19,
+                "correct_count": 38,
+                "total_count": 200
+              },
+              "total_count": 200
+            }
+          },
+          "micro_accuracy": 0.2916666666666667,
+          "micro_correct": 175,
+          "micro_total": 600
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "artifacts": {
+        "summary.json": "results/evidence/full-native-thinking/lanes/latency/summary.json"
+      },
+      "elapsed_s": 87.07416958999966,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "latency",
+      "status": "PASS",
+      "summary": {
+        "drop_first_rep": true,
+        "failed": 0,
+        "method": "openai_chat_stream_c1_latency",
+        "nonstream": {
+          "e2el_ms_mean": 15182.433564001258,
+          "n_stable": 2,
+          "rows": [
+            {
+              "completion_tokens": 894,
+              "e2el_ms": 9011.9796900035,
+              "elapsed_s": 9.0119796900035,
+              "http_status": 200,
+              "ok": true,
+              "prompt_tokens": 49,
+              "rep": 1
+            },
+            {
+              "completion_tokens": 2065,
+              "e2el_ms": 20612.382286002685,
+              "elapsed_s": 20.612382286002685,
+              "http_status": 200,
+              "ok": true,
+              "prompt_tokens": 49,
+              "rep": 2
+            },
+            {
+              "completion_tokens": 974,
+              "e2el_ms": 9752.48484199983,
+              "elapsed_s": 9.75248484199983,
+              "http_status": 200,
+              "ok": true,
+              "prompt_tokens": 49,
+              "rep": 3
+            }
+          ]
+        },
+        "output_tokens": 8192,
+        "reps": 5,
+        "stream": {
+          "e2el_ms_mean": 10085.781061252419,
+          "itl_ms_mean": 19.28555048526875,
+          "itl_ms_p50_mean": 18.889416500314837,
+          "itl_ms_p95_mean": 20.3195527022217,
+          "n_stable": 4,
+          "rows": [
+            {
+              "e2el_ms": 7314.02204400365,
+              "elapsed_s": 7.31402204400365,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 19.389994883456936,
+              "itl_ms_p50": 18.9023310012999,
+              "itl_ms_p95": 20.121065199782603,
+              "ok": true,
+              "rep": 1,
+              "stream_completion_chunks": 370,
+              "text": "Copper is renowned for its exceptional electrical conductivity, ranking second only to silver among pure metals at approximately 5.96 × 10⁷ Siemens per meter. This high conductivity arises from its atomic structure, which facilitates easy movement of free electrons, making it the preferred material for electrical wiring, circuitry, and power transmission. Its balance of performance, cost, and reliability cements copper as the industry standard for conductive applications in modern electronics.",
+              "ttft_ms": 158.19784100312972,
+              "usage": {
+                "completion_tokens": 706,
+                "prompt_tokens": 46,
+                "total_tokens": 752
+              }
+            },
+            {
+              "e2el_ms": 9055.067540000891,
+              "elapsed_s": 9.055067540000891,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 19.31288559052487,
+              "itl_ms_p50": 18.916196499048965,
+              "itl_ms_p95": 20.102685503661633,
+              "ok": true,
+              "rep": 2,
+              "stream_completion_chunks": 465,
+              "text": "Copper is among the best electrical conductors of all metals, surpassed only by silver. Its high conductivity arises from a lattice of atoms with freely moving electrons that carry electric current with minimal resistance. At 20°C, pure copper achieves approximately 5.96 × 10⁷ siemens per meter, or 100% of the International Annealed Copper Standard (IACS). This property makes it essential for electrical wiring, printed circuit boards, and power distribution systems worldwide, offering an optimal balance of conductivity, cost, and durability.",
+              "ttft_ms": 93.78582600038499,
+              "usage": {
+                "completion_tokens": 890,
+                "prompt_tokens": 46,
+                "total_tokens": 936
+              }
+            },
+            {
+              "e2el_ms": 10018.995435006218,
+              "elapsed_s": 10.018995435006218,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 19.389345068361763,
+              "itl_ms_p50": 18.900503502663923,
+              "itl_ms_p95": 20.502738398863585,
+              "ok": true,
+              "rep": 3,
+              "stream_completion_chunks": 513,
+              "text": "Copper is the second-most electrically conductive pure metal after silver, with a conductivity of approximately 5.8 × 10⁷ siemens per meter (about 100% IACS). Its exceptional conductivity stems from a high density of free electrons that flow easily under an electric field. This property makes copper the primary material for electrical wiring, printed circuit boards, and power distribution systems, though its performance can decrease with impurities, cold working, or elevated temperatures.",
+              "ttft_ms": 91.44972100330051,
+              "usage": {
+                "completion_tokens": 1003,
+                "prompt_tokens": 46,
+                "total_tokens": 1049
+              }
+            },
+            {
+              "e2el_ms": 8684.44642599934,
+              "elapsed_s": 8.68444642599934,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 19.245473017982793,
+              "itl_ms_p50": 18.835105998732615,
+              "itl_ms_p95": 20.232677402964327,
+              "ok": true,
+              "rep": 4,
+              "stream_completion_chunks": 446,
+              "text": "Copper is the second-most electrically conductive pure metal after silver, with a conductivity of approximately 5.96 × 10⁷ siemens per meter and a resistivity of about 1.68 × 10⁻⁸ ohm-meters at 20°C. Its excellent balance of conductivity, ductility, and cost makes it the standard material for electrical wiring, printed circuit boards, and power distribution systems worldwide.",
+              "ttft_ms": 100.56390999670839,
+              "usage": {
+                "completion_tokens": 860,
+                "prompt_tokens": 46,
+                "total_tokens": 906
+              }
+            },
+            {
+              "e2el_ms": 12584.614844003227,
+              "elapsed_s": 12.584614844003227,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "itl_ms_mean": 19.194498264205574,
+              "itl_ms_p50": 18.905860000813846,
+              "itl_ms_p95": 20.440109503397252,
+              "ok": true,
+              "rep": 5,
+              "stream_completion_chunks": 652,
+              "text": "Copper exhibits the second-highest electrical conductivity of all pure metals, surpassed only by silver, with a resistivity of approximately 1.68 × 10⁻⁸ Ω·m at 20°C. Its conductivity arises from a high concentration of free electrons that move readily through its atomic lattice. This property makes copper the preferred material for electrical wiring, motor windings, and printed circuit boards. While purity, temperature, and mechanical treatment influence performance, copper remains the industry standard for efficient electrical conduction.",
+              "ttft_ms": 88.71311500115553,
+              "usage": {
+                "completion_tokens": 1235,
+                "prompt_tokens": 46,
+                "total_tokens": 1281
+              }
+            }
+          ],
+          "ttft_ms_mean": 93.62814300038735
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "summary.json": "results/evidence/full-native-thinking/lanes/concurrency/summary.json"
+      },
+      "elapsed_s": 3026.2335619529986,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "concurrency",
+      "status": "PASS",
+      "summary": {
+        "backend": "openai_portable",
+        "drop_first_rep": true,
+        "levels": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "method": "openai_portable_concurrency_ladder",
+        "output_tokens": 8192,
+        "reps": 3,
+        "rows": [
+          {
+            "aggregate_output_tok_s": 99.47010110123497,
+            "completed": 4,
+            "concurrency": 1,
+            "failed": 0,
+            "mean_e2el_ms": 61956.00935400034,
+            "median_client_output_tok_s": 99.3613287038044,
+            "output_tokens": 8192,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          },
+          {
+            "aggregate_output_tok_s": 151.6469698457452,
+            "completed": 8,
+            "concurrency": 2,
+            "failed": 0,
+            "mean_e2el_ms": 107783.10972837516,
+            "median_client_output_tok_s": 76.18829544318638,
+            "output_tokens": 8192,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          },
+          {
+            "aggregate_output_tok_s": 217.0458356879143,
+            "completed": 16,
+            "concurrency": 4,
+            "failed": 0,
+            "mean_e2el_ms": 137139.48633874953,
+            "median_client_output_tok_s": 56.70967242512869,
+            "output_tokens": 8192,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          },
+          {
+            "aggregate_output_tok_s": 252.00408605883925,
+            "completed": 24,
+            "concurrency": 6,
+            "failed": 0,
+            "mean_e2el_ms": 181201.1179166669,
+            "median_client_output_tok_s": 43.00083253028655,
+            "output_tokens": 8192,
+            "repetitions_present": 3,
+            "warmup_rep_dropped": 1
+          }
+        ],
+        "total_failed": 0
+      }
+    },
+    {
+      "artifacts": {
+        "summary.json": "results/evidence/full-native-thinking/lanes/throughput/summary.json"
+      },
+      "elapsed_s": 365.11960243798967,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "throughput",
+      "status": "PASS",
+      "summary": {
+        "backend": "openai_portable",
+        "decode": {
+          "mean_client_output_tok_s": 89.39314394375808,
+          "median_client_output_tok_s": 89.28874937113687,
+          "n_stable": 4,
+          "output_tokens_requested": 8192,
+          "reps": 5,
+          "rows": [
+            {
+              "client_output_tokens_per_second": 88.80416285330897,
+              "completion_tokens": 4800,
+              "elapsed_s": 54.051520173990866,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 1,
+              "server_prompt_tokens_per_second": 1.1100520356663621
+            },
+            {
+              "client_output_tokens_per_second": 90.50279778127735,
+              "completion_tokens": 7907,
+              "elapsed_s": 87.36746480599686,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 2,
+              "server_prompt_tokens_per_second": 0.6867545044740915
+            },
+            {
+              "client_output_tokens_per_second": 88.49227925148124,
+              "completion_tokens": 6183,
+              "elapsed_s": 69.87050228900625,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 3,
+              "server_prompt_tokens_per_second": 0.8587314823045243
+            },
+            {
+              "client_output_tokens_per_second": 88.94642628807458,
+              "completion_tokens": 5089,
+              "elapsed_s": 57.214215482003056,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 4,
+              "server_prompt_tokens_per_second": 1.0486904258762968
+            },
+            {
+              "client_output_tokens_per_second": 89.63107245419917,
+              "completion_tokens": 5359,
+              "elapsed_s": 59.78953339801228,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "decode",
+              "ok": true,
+              "prompt_tokens": 60,
+              "rep": 5,
+              "server_prompt_tokens_per_second": 1.0035201245105336
+            }
+          ]
+        },
+        "drop_first_rep": true,
+        "failed": 0,
+        "method": "openai_portable_c1_throughput",
+        "prefill": {
+          "mean_server_prompt_tok_s": 2031.666099536002,
+          "median_prompt_tokens": 24541.0,
+          "median_server_prompt_tok_s": 2031.666099536002,
+          "n_stable": 2,
+          "note": "prompt tok/s is e2e wall proxy (includes short decode); not pure prefill kernel metric",
+          "output_tokens": 8192,
+          "prompt_tokens_target": 14000,
+          "reps": 3,
+          "rows": [
+            {
+              "client_output_tokens_per_second": 59.13785764533886,
+              "completion_tokens": 745,
+              "elapsed_s": 12.597683271989808,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "prefill",
+              "ok": true,
+              "prompt_tokens": 24541,
+              "rep": 1,
+              "server_prompt_tokens_per_second": 1948.0565966097463
+            },
+            {
+              "client_output_tokens_per_second": 58.82731080948957,
+              "completion_tokens": 743,
+              "elapsed_s": 12.630188084003748,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "prefill",
+              "ok": true,
+              "prompt_tokens": 24541,
+              "rep": 2,
+              "server_prompt_tokens_per_second": 1943.0431151758862
+            },
+            {
+              "client_output_tokens_per_second": 56.67697481911305,
+              "completion_tokens": 656,
+              "elapsed_s": 11.574365111999214,
+              "finish_reason": "stop",
+              "http_status": 200,
+              "kind": "prefill",
+              "ok": true,
+              "prompt_tokens": 24541,
+              "rep": 3,
+              "server_prompt_tokens_per_second": 2120.289083896118
+            }
+          ]
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "niah.json": "results/evidence/full-native-thinking/lanes/niah/niah.json"
+      },
+      "elapsed_s": 20.201342850996298,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "niah",
+      "status": "PASS",
+      "summary": {
+        "all_passed": true,
+        "code": "R0B0-NIAH-7K3M",
+        "depth_policy": "frac_of_max_context",
+        "depths": [
+          10456,
+          20912,
+          37641
+        ],
+        "fractions": [
+          0.25,
+          0.5,
+          0.9
+        ],
+        "generation_reserve": 8192,
+        "kv_cache_size_tokens": 11828784,
+        "marker": "R0B0BENCH_NIAH_SLOT",
+        "max_model_len": 50016,
+        "note": "Depths are always 25/50/90% of (max_model_len - generation_reserve). This is the standard max-context capacity package; physical KV shortfall surfaces as infra ERROR.",
+        "pass_count": 3,
+        "rows": [
+          {
+            "depth": 10456,
+            "elapsed_s": 3.682666008011438,
+            "finish_reason": "stop",
+            "fraction_of_usable": 0.25,
+            "http_status": 200,
+            "infra_errors": 0,
+            "max_model_len": 50016,
+            "needle_fraction_effective": 0.49904361132364194,
+            "passed": true,
+            "prompt_sha256": "d5ea00c7c10367eab259adb782bd9372d5f020ba0e893aad3e953ff0947bbb92",
+            "prompt_tokens_constructed": 10456,
+            "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to find it. The archival record is repetitive, containing the same sentence over and over: \"The archival record contains neutral observations about weather, tools, books, roads, and ordinary daily events.\" However, at the very end, there's a line that says: \"IMPORTANT SECRET VERIFICATION CODE: R0B0-NIAH-7K3M\". That must be the code. The instruction says: \"A secret verification code appears ",
+            "status": "PASS",
+            "usage": {
+              "completion_tokens": 183,
+              "prompt_tokens": 10456,
+              "prompt_tokens_details": null,
+              "total_tokens": 10639
+            }
+          },
+          {
+            "depth": 20912,
+            "elapsed_s": 6.443476903004921,
+            "finish_reason": "stop",
+            "fraction_of_usable": 0.5,
+            "http_status": 200,
+            "infra_errors": 0,
+            "max_model_len": 50016,
+            "needle_fraction_effective": 0.499521805661821,
+            "passed": true,
+            "prompt_sha256": "a44ee7c89a28c47a1c2b1ddd213e351e984a428e5c57a751478239cdae227074",
+            "prompt_tokens_constructed": 20912,
+            "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to find it carefully.\n\nLooking at the text, I see repeated phrases: \"The archival record contains neutral observations about weather, tools, books, roads, and ordinary daily events.\" This phrase repeats many times.\n\nBut I notice at the very beginning, there's a line that says: \"IMPORTANT SECRET VERIFICATION CODE: R0B0-NIAH-7K3M\"\n\nThis seems to be the secret verification code. It's stated ex",
+            "status": "PASS",
+            "usage": {
+              "completion_tokens": 220,
+              "prompt_tokens": 20912,
+              "prompt_tokens_details": null,
+              "total_tokens": 21132
+            }
+          },
+          {
+            "depth": 37641,
+            "elapsed_s": 9.673227466002572,
+            "finish_reason": "stop",
+            "fraction_of_usable": 0.9,
+            "http_status": 200,
+            "infra_errors": 0,
+            "max_model_len": 50016,
+            "needle_fraction_effective": 0.49974761563189074,
+            "passed": true,
+            "prompt_sha256": "9f81639409f998561ea8f2d6bae5da131a796770976efbe672dd4709d616d64b",
+            "prompt_tokens_constructed": 37641,
+            "response_text": "The user is asking for a secret verification code that appears exactly once in the archival record. I need to carefully read the text to find it.\n\nLooking at the text, I see a pattern: the archival record contains neutral observations about weather, tools, books, roads, and ordinary daily events. This repeats many times.\n\nHowever, towards the end of the text, I see something different:\n\n\"IMPORTANT SECRET VERIFICATION CODE: R0B0-NIAH-7K3M\"\n\nThis appears to be the secret verification code that the",
+            "status": "PASS",
+            "usage": {
+              "completion_tokens": 206,
+              "prompt_tokens": 37641,
+              "prompt_tokens_details": null,
+              "total_tokens": 37847
+            }
+          }
+        ],
+        "template_source": "server:/v1/chat/completions/render",
+        "tokenizer": {
+          "backend": "tokenizers",
+          "path": "model-assets/tokenizer.json"
+        },
+        "total": 3
+      }
+    },
+    {
+      "artifacts": {
+        "qa.json": "results/evidence/full-native-thinking/lanes/qa/qa.json"
+      },
+      "elapsed_s": 1283.6158982740017,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "qa",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.9575,
+        "concurrency": 2,
+        "correct": 383,
+        "data_path": "datasets/qa/arc_easy_test.jsonl",
+        "dataset": "allenai/ai2_arc ARC-Easy test",
+        "infra_http_errors": 0,
+        "method": "arc_easy_mc_letter",
+        "n": 400,
+        "wilson95": {
+          "high": 0.9732985304483749,
+          "low": 0.9329974034029175
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "ifeval.json": "results/evidence/full-native-thinking/lanes/ifeval/ifeval.json"
+      },
+      "elapsed_s": 4296.024223593005,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "ifeval",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.775,
+        "concurrency": 2,
+        "correct": 155,
+        "data_path": "datasets/ifeval/input_data.jsonl",
+        "infra_http_errors": 0,
+        "method": "ifeval_lightweight_constraint_scorer",
+        "n": 200,
+        "note": "Not full official IFEval scorer; common instruction families only. Label as lightweight.",
+        "wilson95": {
+          "high": 0.8273771621308439,
+          "low": 0.7122575346140798
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "humaneval.json": "results/evidence/full-native-thinking/lanes/humaneval/humaneval.json",
+        "samples.jsonl": "results/evidence/full-native-thinking/lanes/humaneval/samples.jsonl"
+      },
+      "elapsed_s": 2421.106471799998,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "humaneval",
+      "status": "PASS",
+      "summary": {
+        "concurrency": 2,
+        "data_path": "datasets/humaneval/HumanEval.jsonl",
+        "eval_error": null,
+        "infra_http_errors": 0,
+        "method": "humaneval_functional_correctness",
+        "n": 164,
+        "pass@1": 0.9390243902439024,
+        "pass_at": {
+          "pass@1": 0.9390243902439024
+        }
+      }
+    },
+    {
+      "artifacts": {
+        "gsm8k.json": "results/evidence/full-native-thinking/lanes/gsm8k/gsm8k.json"
+      },
+      "elapsed_s": 1475.4543874980009,
+      "imported": false,
+      "infra_errors": 0,
+      "lane_id": "gsm8k",
+      "status": "PASS",
+      "summary": {
+        "accuracy": 0.91,
+        "concurrency": 2,
+        "correct": 182,
+        "data_path": "datasets/gsm8k/test.jsonl",
+        "infra_http_errors": 0,
+        "method": "gsm8k_0shot_flexible_extract",
+        "n": 200,
+        "seed": 0,
+        "wilson95": {
+          "high": 0.9423130212854665,
+          "low": 0.8622332538615105
+        }
+      }
+    }
+  ],
+  "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "profile": "core-subset",
+  "r0b0bench_version": "1.0.0rc2",
+  "run_id": "nemotron-lightning-mtp-k1-general-thinking-on-allowed-responses-20260810T114534Z",
+  "schema_version": 2,
+  "started_utc": "2026-08-10T18:51:00.501736+00:00",
+  "systems_lanes": [
+    "canary",
+    "bfcl_mt",
+    "bfcl_ast",
+    "latency",
+    "concurrency",
+    "throughput",
+    "niah"
+  ]
+}

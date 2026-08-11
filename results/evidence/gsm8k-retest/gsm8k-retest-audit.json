@@ -1,0 +1,77 @@
+{
+  "audit_schema": "gsm8k-retest-audit-v1",
+  "status": "PASS",
+  "qualification": "lane_level_pass_with_disclosure",
+  "invalid_for_publish": true,
+  "invalid_for_publish_reason": "This was a GSM8K-only --only run; it is not a complete core-subset publication row.",
+  "run_id": "nemotron-lightning-mtp-k1-general-thinking-on-allowed-gsm49152-20260810T193328Z",
+  "report": "results/evidence/gsm8k-retest/report.json",
+  "raw_rows": "results/evidence/gsm8k-retest/lanes/gsm8k/gsm8k.json",
+  "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "benchmark": "r0b0bench 1.0.0rc2",
+  "profile": "core-subset",
+  "method": "gsm8k_0shot_flexible_extract",
+  "source": {
+    "worktree": "benchmark",
+    "head": "e0f0bf667d3ea8e97f2a9c4453f94201173c7082",
+    "diff_sha256": "a243d10350cf83aa6dc7019d15198e2fae59cfad953a98506a638d973b961200"
+  },
+  "template_controls": {
+    "thinking": true,
+    "enable_thinking": true
+  },
+  "budget": {
+    "requested_max_tokens": 49152,
+    "server_max_model_len": 50016,
+    "model_max_position_embeddings": 262144,
+    "concurrency": 2
+  },
+  "result": {
+    "n": 200,
+    "correct": 189,
+    "accuracy": 0.945,
+    "wilson95": {
+      "low": 0.9042120755340645,
+      "high": 0.9690149791986299
+    },
+    "http_200": 200,
+    "infra_errors": 0,
+    "finish_reasons": {
+      "stop": 199,
+      "length": 1
+    },
+    "max_completion_tokens_observed": 49152,
+    "at_requested_cap": 1
+  },
+  "disclosure": {
+    "classification": "model_nontermination_after_generous_budget",
+    "length_limited_row": {
+      "index": 147,
+      "question_sha256": "0bdf86408317d937c14755e19be8c64d4cd8bdc9af4e7b62c43370d2c4974c0d",
+      "finish_reason": "length",
+      "http_status": 200,
+      "prompt_tokens": 162,
+      "completion_tokens": 49152,
+      "visible_text_chars": 0,
+      "prediction": null,
+      "counted_correct": false
+    },
+    "budget_ladder": {
+      "8192": [
+        41,
+        119,
+        147,
+        157,
+        186
+      ],
+      "32768": [
+        119,
+        147
+      ],
+      "49152": [
+        147
+      ]
+    },
+    "interpretation": "The higher-budget run completed all 200 cases with valid scoring and zero infrastructure errors. The persistent single row is retained as a scoreable model nontermination after a generous bounded allowance; it is not treated as evidence that the entire lane was artificially truncated."
+  }
+}

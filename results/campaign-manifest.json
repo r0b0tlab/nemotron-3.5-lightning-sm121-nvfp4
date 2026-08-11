@@ -1,0 +1,113 @@
+{
+  "campaign": "nemotron-lightning-full-evaluations",
+  "created_utc": "2026-08-10T03:31:06Z",
+  "scope": "full core-subset plus latency/concurrency/MTP/throughput evaluations",
+  "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "checkpoint": "model-assets",
+  "hardware": "NVIDIA GB10 / SM121",
+  "baseline_epoch_0": {
+    "container": "nemotron-lightning-sm121",
+    "image": "nemotron-lightning-vllm:private-sm121-mtp",
+    "image_id": "sha256:442df05bcaaf4ca33d1e7eb6d18ea0f4272be6b1503b6604dc191acbd4e47640",
+    "mode": "mtp",
+    "num_speculative_tokens": 1,
+    "target_moe_backend": "marlin",
+    "drafter_moe_backend": "triton",
+    "max_model_len": 50016,
+    "max_num_batched_tokens": 4096,
+    "max_num_seqs": 1,
+    "gpu_memory_utilization": 0.7,
+    "kv_cache_dtype": "fp8",
+    "endpoint": "http://127.0.0.1:8000/v1",
+    "preserved_evidence": "results/local-campaign/epoch-0-c1-only-preserved",
+    "historical_corrected_report": "[LOCAL_PATH_REDACTED]/artifacts/nemotron-lightning-r0b0bench/nemotron-lightning-mtp-corrected-latency-throughput-20260809T235638Z/report.json"
+  },
+  "benchmark_client": {
+    "repo": "[LOCAL_PATH_REDACTED]/artifacts/nemotron-lightning-r0b0bench/r0b0bench-src-e0f0bf6",
+    "base_sha": "e0f0bf667d3ea8e97f2a9c4453f94201173c7082",
+    "package_version": "1.0.0rc2",
+    "venv_python": "[LOCAL_PATH_REDACTED]/artifacts/dspark-v026/0731-pubsuite-20260731T163517Z/r0b0bench/venv/bin/python",
+    "private_patch_sha256_before_full_campaign": "b8e644c46379c078c90865a9b27884819bc54248e866e697932e8ad7bc087771",
+    "patches": [
+      "Nemotron enable_thinking template key in quality, concurrency, latency, throughput, canary, and NIAH",
+      "SSE delta.reasoning timing support",
+      "unique leading marker per measured repeat",
+      "BFCL template kwargs injection via R0B0BENCH_CHAT_TEMPLATE_KWARGS",
+      "fail-closed selected-lane completion status"
+    ]
+  },
+  "execution_policy": {
+    "fail_forward": true,
+    "no_hard_stop_on_model_failures": true,
+    "preserve_and_classify_infra_failures": true,
+    "never_mix_endpoint_epochs": true,
+    "weights_read_only": true,
+    "thinking_off_for_quality_and_perf": true,
+    "thinking_on_for_entire_evaluation": true,
+    "native_bfcl_control_separate": true
+  },
+  "response_budget_correction": {
+    "status": "complete_with_disclosure",
+    "source_worktree": "benchmark",
+    "source_head": "e0f0bf667d3ea8e97f2a9c4453f94201173c7082",
+    "full_corrected_run": "results/evidence/full-native-thinking/report.json",
+    "full_corrected_protocol_manifest": "results/evidence/full-native-thinking/protocol.json",
+    "successful_lanes_retained_without_rerun": [
+      "canary",
+      "bfcl_mt",
+      "bfcl_ast",
+      "latency",
+      "concurrency",
+      "throughput",
+      "niah",
+      "qa",
+      "ifeval",
+      "humaneval"
+    ],
+    "gsm8k_retest_49152": {
+      "status": "PASS",
+      "report": "results/evidence/gsm8k-retest/report.json",
+      "audit": "results/evidence/gsm8k-retest/gsm8k-retest-audit.json",
+      "requested_max_tokens": 49152,
+      "n": 200,
+      "correct": 189,
+      "accuracy": 0.945,
+      "infra_errors_total": 0,
+      "finish_reasons": {
+        "stop": 199,
+        "length": 1
+      },
+      "classification": "model_nontermination_after_generous_budget",
+      "invalid_for_publish": true,
+      "invalid_for_publish_reason": "GSM8K-only filtered retest; not a standalone full-suite publication row",
+      "reconciled_result": "results/evidence/reconciled/report.json",
+      "reconciliation_manifest": "results/evidence/reconciled/reconciliation-manifest.json",
+      "reconciled_all_lanes_pass": true,
+      "uploaded": false
+    }
+  },
+  "completion": {
+    "status": "COMPLETE_WITH_DISCLOSURES",
+    "primary_full_core_subset": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/report.json",
+    "native_thinking_on_diagnostic": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-on-full-core-subset-20260810T034056Z/report.json",
+    "base_ar_perf_diagnostic": "results/local-campaign/nemotron-lightning-base-ar-general-thinking-off-perf-20260810T083800Z/report.json",
+    "mtp_k_ladder": "results/local-campaign/epoch-3-mtp-k-ladder/controller.log",
+    "handoff_json": "results/local-campaign/campaign-handoff.json",
+    "handoff_markdown": "results/local-campaign/campaign-handoff.md",
+    "primary_invalid_for_publish": false,
+    "primary_infra_errors_total": 0
+  },
+  "next_general_mtp_profile": {
+    "mode": "mtp",
+    "num_speculative_tokens": 1,
+    "target_moe_backend": "marlin",
+    "drafter_moe_backend": "triton",
+    "max_model_len": 50016,
+    "max_num_batched_tokens": 8192,
+    "max_num_seqs": 6,
+    "gpu_memory_utilization": 0.7,
+    "kv_cache_dtype": "fp8",
+    "graphs": "production FULL_AND_PIECEWISE; no enforce-eager",
+    "reason": "full C1/C2/C4/C6 concurrency evaluation and MTP slot warning"
+  }
+}

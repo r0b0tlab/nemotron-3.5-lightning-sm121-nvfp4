@@ -1,0 +1,2 @@
+# Unified diff artifacts intentionally contain single-space context prefixes.
+benchmark/thinking-allowed.patch whitespace=-blank-at-eol

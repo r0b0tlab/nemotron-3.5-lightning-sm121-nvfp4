@@ -1,0 +1,280 @@
+{
+  "campaign": "nemotron-lightning-mtp-core-subset-and-systems",
+  "status": "COMPLETE_WITH_DISCLOSURES",
+  "visibility": "private",
+  "completed_utc": "2026-08-10",
+  "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "endpoint": "http://127.0.0.1:8000/v1",
+  "hardware": "NVIDIA GB10 / SM121",
+  "runtime": {
+    "image": "nemotron-lightning-vllm:private-sm121-mtp",
+    "image_id": "sha256:442df05bcaaf4ca33d1e7eb6d18ea0f4272be6b1503b6604dc191acbd4e47640",
+    "vllm_commit": "f25953cc59f9b4ba9b04b16228d2b86dcfbcbdb1",
+    "vllm_version": "0.23.1rc1.dev1327+gf25953cc5",
+    "torch": "2.11.0+cu129",
+    "flashinfer": "0.6.14",
+    "benchmark_client": "r0b0bench 1.0.0rc2",
+    "benchmark_base_commit": "e0f0bf667d3ea8e97f2a9c4453f94201173c7082",
+    "benchmark_source_worktree": "[LOCAL_PATH_REDACTED]/artifacts/nemotron-lightning-r0b0bench/r0b0bench-src-e0f0bf6",
+    "model_path": "model-assets"
+  },
+  "primary_full_core_subset": {
+    "profile": "core-subset",
+    "mode": "mtp",
+    "k": 1,
+    "thinking": "off",
+    "server_profile": {
+      "container": "nemotron-lightning-mtp-general-c6",
+      "max_model_len": 50016,
+      "max_num_batched_tokens": 8192,
+      "max_num_seqs": 6,
+      "gpu_memory_utilization": 0.7,
+      "kv_cache_dtype": "fp8",
+      "target_moe_backend": "marlin",
+      "mtp_drafter_backend": "triton",
+      "cudagraphs": true,
+      "prefix_caching": true
+    },
+    "report": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-clean2-20260810T083800Z/report.json",
+    "controller_log": "results/local-campaign/epoch-1-general-mtp-k1-thinking-off-clean2-controller.log",
+    "invalid_for_publish": false,
+    "infra_errors_total": 0,
+    "lane_status": "all 11 PASS",
+    "scores": {
+      "qa_arc_easy": "381/400 = 95.25%",
+      "ifeval_lightweight": "155/200 = 77.5%; not the official full IFEval scorer",
+      "humaneval_functional": "pass@1 = 0.8597560975609756 over 164",
+      "gsm8k_flexible_extract": "189/200 = 94.5%",
+      "bfcl_multi_turn_base": "142/200 = 71.0% official",
+      "bfcl_ast_micro": "165/600 = 27.5% official",
+      "bfcl_ast_multiple": "34/200 = 17.0%",
+      "bfcl_ast_parallel": "97/200 = 48.5%",
+      "bfcl_ast_parallel_multiple": "34/200 = 17.0%",
+      "niah": "3/3 PASS at 12,440 / 24,880 / 44,784 constructed prompt tokens"
+    },
+    "systems": {
+      "latency_stream": {
+        "stable_repetitions": 4,
+        "ttft_ms_mean": 92.32905600038066,
+        "e2e_ms_mean": 1127.051439252682,
+        "itl_fragment_ms_mean": 18.544845285347773,
+        "itl_fragment_ms_p50_mean": 18.497351374207938,
+        "itl_fragment_ms_p95_mean": 19.574961249327316
+      },
+      "concurrency_aggregate_output_tok_s": {
+        "c1": 103.4110380693415,
+        "c2": 180.46525700241665,
+        "c4": 304.27641444286087,
+        "c6": 376.3154235825983
+      },
+      "throughput": {
+        "decode_median_client_tok_s": 90.95360678348186,
+        "decode_mean_client_tok_s": 90.94535656360449,
+        "decode_repetitions": "5 total, first dropped, 4 stable",
+        "decode_output_tokens": 2048,
+        "prefill_proxy_median_prompt_tok_s": 28815.64292954854,
+        "prefill_prompt_tokens": 24541,
+        "prefill_repetitions": "3 total, first dropped, 2 stable"
+      },
+      "niah": {
+        "max_model_len": 50016,
+        "generation_reserve": 256,
+        "live_kv_cache_size_tokens": 11753760,
+        "depths": [
+          12440,
+          24880,
+          44784
+        ],
+        "all_passed": true
+      }
+    }
+  },
+  "matched_base_ar_perf": {
+    "report": "results/local-campaign/nemotron-lightning-base-ar-general-thinking-off-perf-20260810T083800Z/report.json",
+    "invalid_for_publish": true,
+    "reason": "selected latency/concurrency/throughput comparison only; not a full core-subset profile",
+    "infra_errors_total": 0,
+    "thinking": "off",
+    "decode_median_client_tok_s": 81.21194195190189,
+    "prefill_proxy_median_prompt_tok_s": 5033.532207667378,
+    "latency_stream": {
+      "ttft_ms_mean": 74.56142200135218,
+      "e2e_ms_mean": 1222.291036248862,
+      "itl_fragment_ms_mean": 12.27110201939701,
+      "itl_fragment_ms_p95_mean": 14.852321211401431
+    },
+    "concurrency_aggregate_output_tok_s": {
+      "c1": 80.97326081028406,
+      "c2": 147.97096850292328,
+      "c4": 243.48632175623857,
+      "c6": 278.39947653909434
+    },
+    "matched_delta_mtp_k1_vs_base": {
+      "decode_median_pct": 11.99536003873607,
+      "prefill_proxy_pct": 472.4735978773479,
+      "ttft_pct": 23.829526747365758,
+      "e2e_pct": -7.791891961219366,
+      "concurrency_aggregate_pct": {
+        "c1": 27.710107058215105,
+        "c2": 21.95990796590037,
+        "c4": 24.966532923964845,
+        "c6": 35.171024119994755
+      }
+    }
+  },
+  "native_thinking_on_full_run": {
+    "report": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-on-full-core-subset-20260810T034056Z/report.json",
+    "invalid_for_publish": true,
+    "infra_errors_total": 1,
+    "reason": "native thinking full run preserved as diagnostic: canary model/profile FAIL under short 256-token budgets and HumanEval scorer was unavailable at launch; all other lanes continued and completed",
+    "key_scores": {
+      "bfcl_multi_turn_base": "142/200 = 71.0%",
+      "bfcl_ast_micro": "165/600 = 27.5%",
+      "qa": "0/400",
+      "ifeval_lightweight": "30/200 = 15.0%",
+      "gsm8k": "58/200 = 29.0%",
+      "latency_stream_ttft_ms_mean": 92.91161275359627,
+      "throughput_decode_median_client_tok_s": 91.91119352285129
+    },
+    "canary": {
+      "identity": true,
+      "needle": true,
+      "structured": false,
+      "tool_call": true,
+      "zh_arithmetic": true
+    },
+    "humaneval": "164 HTTP-200 samples captured; scorer import failed with No module named human_eval"
+  },
+  "native_thinking_allowed_full": {
+    "report": "results/evidence/full-native-thinking/report.json",
+    "protocol_manifest": "results/evidence/full-native-thinking/protocol.json",
+    "source_worktree": "benchmark",
+    "source_head": "e0f0bf667d3ea8e97f2a9c4453f94201173c7082",
+    "source_diff_sha256": "a89df0b6ac9846d5ee3342ecf997a948f993c21b093700a6e53a538db452f149",
+    "template_controls": {
+      "thinking": true,
+      "enable_thinking": true
+    },
+    "invalid_for_publish": true,
+    "reason": "All non-GSM8K lanes passed with zero infrastructure errors. The initial corrected GSM8K lane had five finish_reason=length rows at the 8192-token ceiling; those rows were preserved and only GSM8K was retested.",
+    "successful_lanes_retained": [
+      "canary",
+      "bfcl_mt",
+      "bfcl_ast",
+      "latency",
+      "concurrency",
+      "throughput",
+      "niah",
+      "qa",
+      "ifeval",
+      "humaneval"
+    ]
+  },
+  "native_thinking_gsm8k_retest": {
+    "status": "PASS",
+    "lane_status": "PASS",
+    "run_id": "nemotron-lightning-mtp-k1-general-thinking-on-allowed-gsm49152-20260810T193328Z",
+    "report": "results/evidence/gsm8k-retest/report.json",
+    "audit": "results/evidence/gsm8k-retest/gsm8k-retest-audit.json",
+    "invalid_for_publish": true,
+    "reason": "GSM8K-only --only retest; accepted as the lane-level result, not as a standalone full-suite publication row.",
+    "source_diff_sha256": "a243d10350cf83aa6dc7019d15198e2fae59cfad953a98506a638d973b961200",
+    "template_controls": {
+      "thinking": true,
+      "enable_thinking": true
+    },
+    "requested_max_tokens": 49152,
+    "server_max_model_len": 50016,
+    "n": 200,
+    "correct": 189,
+    "accuracy": 0.945,
+    "wilson95": {
+      "low": 0.9042120755340645,
+      "high": 0.9690149791986299
+    },
+    "infra_errors_total": 0,
+    "finish_reasons": {
+      "stop": 199,
+      "length": 1
+    },
+    "classification": "model_nontermination_after_generous_budget",
+    "length_limited_row": {
+      "index": 147,
+      "question_sha256": "0bdf86408317d937c14755e19be8c64d4cd8bdc9af4e7b62c43370d2c4974c0d",
+      "completion_tokens": 49152,
+      "prompt_tokens": 162,
+      "http_status": 200,
+      "visible_text_chars": 0,
+      "counted_correct": false
+    },
+    "budget_ladder": {
+      "8192": 5,
+      "32768": 2,
+      "49152": 1
+    },
+    "reconciled_result": "results/evidence/reconciled/report.json",
+    "reconciliation_manifest": "results/evidence/reconciled/reconciliation-manifest.json",
+    "reconciled_all_lanes_pass": true,
+    "uploaded": false
+  },
+  "mtp_k_ladder": {
+    "root": "results/local-campaign/epoch-3-mtp-k-ladder",
+    "controller": "results/local-campaign/epoch-3-mtp-k-ladder/controller.log",
+    "selection": "K=1 retained as primary because it owns the full valid core-subset and full systems evidence; K=2/3/4 are bounded probes, not full performance qualification",
+    "probes": {
+      "k1": {
+        "status": "PASS",
+        "draft_tokens": 3,
+        "accepted_tokens": 3,
+        "acceptance_rate": 1.0,
+        "prefix_cache_hits": 0,
+        "preemptions": 0
+      },
+      "k2": {
+        "status": "PASS",
+        "draft_tokens": 6,
+        "accepted_tokens": 6,
+        "acceptance_rate": 1.0,
+        "prefix_cache_hits": 0,
+        "preemptions": 0
+      },
+      "k3": {
+        "status": "PASS",
+        "draft_tokens": 9,
+        "accepted_tokens": 9,
+        "acceptance_rate": 1.0,
+        "prefix_cache_hits": 0,
+        "preemptions": 0
+      },
+      "k4": {
+        "status": "PASS",
+        "draft_tokens": 12,
+        "accepted_tokens": 12,
+        "acceptance_rate": 1.0,
+        "prefix_cache_hits": 0,
+        "preemptions": 0
+      }
+    },
+    "caveat": "The short deterministic probe saturates acceptance and cannot select an optimal K by itself; no K2/K3/K4 full C1/C6 repeat matrix was claimed."
+  },
+  "adapter_and_blocker_history": {
+    "human_eval_dependency_repaired": "human-eval imports successfully in the benchmark venv; pip check retains unrelated pre-existing nvidia-cusparselt-cu13 platform warning",
+    "bfcl_adapter_repaired": "vLLM chat_template_kwargs routed through OpenAI SDK extra_body; exact JSON environment validated",
+    "malformed_off_diagnostic": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-off-full-core-subset-20260810T081130Z/report.json",
+    "source_native_on": "results/local-campaign/epoch-1-general-mtp-k1-thinking-on-source",
+    "source_clean2": "results/local-campaign/epoch-1-general-mtp-k1-thinking-off-clean2-source"
+  },
+  "restored_server": {
+    "container": "nemotron-lightning-mtp-k1-restored",
+    "container_id": "b97c6a0f7a4cdfc1d2793c8c6efcbfa429e5b66d8564d638aaba90cd000054c3",
+    "status": "running",
+    "speculative_config": {
+      "method": "mtp",
+      "num_speculative_tokens": 1,
+      "moe_backend": "triton"
+    },
+    "served_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "endpoint_verified": true,
+    "identity_probe": "results/local-campaign/epoch-3-mtp-k-ladder/k1-restored/probe.json"
+  }
+}

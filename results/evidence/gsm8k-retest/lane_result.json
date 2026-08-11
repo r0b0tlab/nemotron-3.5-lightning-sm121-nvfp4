@@ -1,0 +1,24 @@
+{
+  "artifacts": {
+    "gsm8k.json": "results/local-campaign/nemotron-lightning-mtp-k1-general-thinking-on-allowed-gsm49152-20260810T193328Z/lanes/gsm8k/gsm8k.json"
+  },
+  "elapsed_s": 1964.1887899629946,
+  "imported": false,
+  "infra_errors": 0,
+  "lane_id": "gsm8k",
+  "status": "PASS",
+  "summary": {
+    "accuracy": 0.945,
+    "concurrency": 2,
+    "correct": 189,
+    "data_path": "datasets/gsm8k/test.jsonl",
+    "infra_http_errors": 0,
+    "method": "gsm8k_0shot_flexible_extract",
+    "n": 200,
+    "seed": 0,
+    "wilson95": {
+      "high": 0.9690149791986299,
+      "low": 0.9042120755340645
+    }
+  }
+}
